@@ -1,0 +1,903 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		071CF17DA4C0318ABCDD013D2250731A /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD2EE02C82F0738B46F0B5D88DCC4714 /* CoreFoundation.framework */; };
+		0B81BBA554A89212A9BE8BDC8662EA1C /* STKAutoRecoveringHTTPDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B3B9A4608A76176410C4720DE21A0E /* STKAutoRecoveringHTTPDataSource.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		23AB268B537E567E8D9A6C11143B56BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E901389EA02ACC9AF6A580A51F072D3 /* Foundation.framework */; };
+		2949251FAD860B239AC6A60FB8C07A47 /* Pods-ebmRadio-ios-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 57313512472CA7A62FCBAAFDF2BFC9E7 /* Pods-ebmRadio-ios-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2ED4A0402420AECE4138A85B96BB0B73 /* STKDataSourceWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = EB11088A856D5AADF52DCA2489577430 /* STKDataSourceWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30349E0D973E97CFA4FDC1BE5D2DC37D /* Pods-ebmRadio-iosTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D636D089E9A4FA9371EABB67217EC7D /* Pods-ebmRadio-iosTests-dummy.m */; };
+		396F76436E1E49F13EDAA6B1234E36AA /* STKLocalFileDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F34228837D0789E45C01871036D5469 /* STKLocalFileDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3AD3D0B27041BF52A2B8C993FEECC16D /* STKHTTPDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 79138790A5C8F0284A90EC92CC1F3BB2 /* STKHTTPDataSource.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		3BFE02EC9AECDC6FBBF6E64F639AEC50 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7CEF886328CA78C490429E1B00F7122 /* SystemConfiguration.framework */; };
+		44B241A60D5555A4446EE0452A85A326 /* STKDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C35E8837A8CE796877C75FFE87FF7E1 /* STKDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		533FD63A0A5B2126213E9CD1EE36DA61 /* StreamingKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 76CF349AC563DEFDF339490C9F975C97 /* StreamingKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		577B2BB89BDA09CE53C93A6C648EA187 /* STKCoreFoundationDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FE663B0781343F5B1C64A344AA436EB /* STKCoreFoundationDataSource.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		61219656A928901F391E76ADF0EDFB46 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E901389EA02ACC9AF6A580A51F072D3 /* Foundation.framework */; };
+		6A306556A7657E93357D07C0A1E0D9DA /* STKAudioPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = DE6576EBF69451CF9844FEEB95DB404C /* STKAudioPlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6C90AFDB235F2ADFF693EDF3C1F4154F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B3F2BAF355C430FB1ADDFF2DC7B26E3 /* AudioToolbox.framework */; };
+		7AFCE40ABEF394B85792C311888D4BB9 /* Pods-ebmRadio-iosUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE47B05C7A18A5CA94100C4051F51CA /* Pods-ebmRadio-iosUITests-dummy.m */; };
+		7B84F4ADEB0BA3E9D09F0EB6348A77B3 /* NSMutableArray+STKAudioPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = FD11F8B9D5DFF074BA7C2A1D8D6CD017 /* NSMutableArray+STKAudioPlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7CED2301F7D42A36DB878AE7AF61ED10 /* STKAutoRecoveringHTTPDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FBD4122083B3A9FC7D8C57C94E33BBE /* STKAutoRecoveringHTTPDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7D8826BFAEDA2B2272C87DB83173933C /* Pods-ebmRadio-iosUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E5C3AD710C6489F50CE1DF3DA4FDB88E /* Pods-ebmRadio-iosUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		84CCBD6195397D3DD896F272F89E6A9A /* STKQueueEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A88C5535B7B41AAE5AF46FA93AB130 /* STKQueueEntry.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		8A24FC1603626BE55B2221A7E3E76BD8 /* NSMutableArray+STKAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD3D6C91EADFC882F537BE160FA2629 /* NSMutableArray+STKAudioPlayer.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		8E7BEC400B36C658CC60A6FAA0E1EDF4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E901389EA02ACC9AF6A580A51F072D3 /* Foundation.framework */; };
+		94BA1818D62EAE6DC6392651D1C25C10 /* STKQueueEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C5BC4013C78608BADA185244C0D568F /* STKQueueEntry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F54A9667E73FE85A75FD418CC7844B4 /* STKHTTPDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = CE30F8C8BF24F886D00F998873DAC70B /* STKHTTPDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A85C9E7C6B28D7D40C2A575B592E7D5A /* STKDataSourceWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = B1820536FBE2F2A469B4815FEF2138F9 /* STKDataSourceWrapper.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		ADED6F115CCCD596EEA20E213B757490 /* StreamingKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CB932112EB065C14FA9DF65647966449 /* StreamingKit-dummy.m */; };
+		B45547DD5E2E2AE4B5DA0DE38FD665C5 /* STKLocalFileDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC9E01CF08568B985FED4DD5A193381 /* STKLocalFileDataSource.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		C5A994EFF3B423CFC288496AFEF5EA64 /* STKDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C49AA4B8477911682AEBA99E10A7FE /* STKDataSource.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		C5CAB34D74CC0C108D28BE1B6C333A62 /* STKCoreFoundationDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = EE290936E47B9E21D2C513D982819DB2 /* STKCoreFoundationDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D5EBF2FAE8DA5EE9D804C8BBCCAF4DB1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4961FDA37C5D3F3C7AACCB0A93FB73F4 /* CFNetwork.framework */; };
+		D741E5DF6C192138C8503AB3B6E449E1 /* Pods-ebmRadio-ios-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0381AEEA1883B777229C35E3357FC280 /* Pods-ebmRadio-ios-dummy.m */; };
+		DAD663E3316D1915398B3F9E30E8C7DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E901389EA02ACC9AF6A580A51F072D3 /* Foundation.framework */; };
+		F3EBC9183F9FD4A960B57CE0B444E9E1 /* Pods-ebmRadio-iosTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 57C6D295235224AAAD93A2A5A0932F57 /* Pods-ebmRadio-iosTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F5457421B58C965EAC60AB93C661D82A /* STKAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B9F0397C31AD16ED20A04A31767F1D /* STKAudioPlayer.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		846624ACB2D5D2C093C2B632A6864C63 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 231EB13B9E674815414FE3882BBE2A3B;
+			remoteInfo = StreamingKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00B3B9A4608A76176410C4720DE21A0E /* STKAutoRecoveringHTTPDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STKAutoRecoveringHTTPDataSource.m; path = StreamingKit/StreamingKit/STKAutoRecoveringHTTPDataSource.m; sourceTree = "<group>"; };
+		0381AEEA1883B777229C35E3357FC280 /* Pods-ebmRadio-ios-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ebmRadio-ios-dummy.m"; sourceTree = "<group>"; };
+		0478EC2278CE7FEABEC3C1AF4DFD98CE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04E0554540BCD101A92DE30588C0E680 /* Pods-ebmRadio-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ebmRadio-iosTests.release.xcconfig"; sourceTree = "<group>"; };
+		05DC5530A75793FAC41598524B0CC1D1 /* Pods-ebmRadio-ios-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ebmRadio-ios-acknowledgements.plist"; sourceTree = "<group>"; };
+		07FDC5EA3B5DE63B6C95106C2C1C9E3C /* StreamingKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StreamingKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0875F777F58E7EB2EEAB178452DD17CA /* StreamingKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = StreamingKit.xcconfig; sourceTree = "<group>"; };
+		0E59F032E4C4D4102586354D4B1BFAEB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F34228837D0789E45C01871036D5469 /* STKLocalFileDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STKLocalFileDataSource.h; path = StreamingKit/StreamingKit/STKLocalFileDataSource.h; sourceTree = "<group>"; };
+		18216338E047029B51AF232E3B2C4637 /* Pods-ebmRadio-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ebmRadio-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		1862491DDFC43DC0EF47C1AC89E4D10A /* Pods-ebmRadio-ios.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ebmRadio-ios.modulemap"; sourceTree = "<group>"; };
+		1DD3D6C91EADFC882F537BE160FA2629 /* NSMutableArray+STKAudioPlayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+STKAudioPlayer.m"; path = "StreamingKit/StreamingKit/NSMutableArray+STKAudioPlayer.m"; sourceTree = "<group>"; };
+		1FE663B0781343F5B1C64A344AA436EB /* STKCoreFoundationDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STKCoreFoundationDataSource.m; path = StreamingKit/StreamingKit/STKCoreFoundationDataSource.m; sourceTree = "<group>"; };
+		211C4339CC99807BD43795659680B068 /* Pods-ebmRadio-ios-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ebmRadio-ios-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2C5BC4013C78608BADA185244C0D568F /* STKQueueEntry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STKQueueEntry.h; path = StreamingKit/StreamingKit/STKQueueEntry.h; sourceTree = "<group>"; };
+		364A003416E742ADFF33E5938610D04E /* Pods-ebmRadio-iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ebmRadio-iosUITests.release.xcconfig"; sourceTree = "<group>"; };
+		46EF1DA0EC00915C1B373CF768602CDA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4961FDA37C5D3F3C7AACCB0A93FB73F4 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		4AD0E770AE2036A78F19468D7DEFE437 /* Pods-ebmRadio-iosTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ebmRadio-iosTests-resources.sh"; sourceTree = "<group>"; };
+		53455DB7EF7922D5FD38A78EADC0A744 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54C49AA4B8477911682AEBA99E10A7FE /* STKDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STKDataSource.m; path = StreamingKit/StreamingKit/STKDataSource.m; sourceTree = "<group>"; };
+		57313512472CA7A62FCBAAFDF2BFC9E7 /* Pods-ebmRadio-ios-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ebmRadio-ios-umbrella.h"; sourceTree = "<group>"; };
+		57C6D295235224AAAD93A2A5A0932F57 /* Pods-ebmRadio-iosTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ebmRadio-iosTests-umbrella.h"; sourceTree = "<group>"; };
+		5C35E8837A8CE796877C75FFE87FF7E1 /* STKDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STKDataSource.h; path = StreamingKit/StreamingKit/STKDataSource.h; sourceTree = "<group>"; };
+		5CC9E01CF08568B985FED4DD5A193381 /* STKLocalFileDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STKLocalFileDataSource.m; path = StreamingKit/StreamingKit/STKLocalFileDataSource.m; sourceTree = "<group>"; };
+		5D636D089E9A4FA9371EABB67217EC7D /* Pods-ebmRadio-iosTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ebmRadio-iosTests-dummy.m"; sourceTree = "<group>"; };
+		5E901389EA02ACC9AF6A580A51F072D3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		5FCA885CAA04298EA2C6662F9B05BA49 /* Pods-ebmRadio-iosTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ebmRadio-iosTests-frameworks.sh"; sourceTree = "<group>"; };
+		6CE47B05C7A18A5CA94100C4051F51CA /* Pods-ebmRadio-iosUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ebmRadio-iosUITests-dummy.m"; sourceTree = "<group>"; };
+		741D4F3F3C6FE5DD24F8C87998814593 /* Pods-ebmRadio-iosTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ebmRadio-iosTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		76CF349AC563DEFDF339490C9F975C97 /* StreamingKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StreamingKit-umbrella.h"; sourceTree = "<group>"; };
+		79138790A5C8F0284A90EC92CC1F3BB2 /* STKHTTPDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STKHTTPDataSource.m; path = StreamingKit/StreamingKit/STKHTTPDataSource.m; sourceTree = "<group>"; };
+		7FBD4122083B3A9FC7D8C57C94E33BBE /* STKAutoRecoveringHTTPDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STKAutoRecoveringHTTPDataSource.h; path = StreamingKit/StreamingKit/STKAutoRecoveringHTTPDataSource.h; sourceTree = "<group>"; };
+		90DE3CE00E4EF9347644AA4F780E796E /* Pods-ebmRadio-iosUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ebmRadio-iosUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		99857212CE38678FF66A8F834E054E91 /* Pods-ebmRadio-iosTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ebmRadio-iosTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		9B3F2BAF355C430FB1ADDFF2DC7B26E3 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
+		9EF98F6D8CB6CE3CE20A06E21B4C3BC9 /* Pods_ebmRadio_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ebmRadio_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2ECDFC2FDE8C9519FBACB2BDA26876F /* Pods-ebmRadio-iosUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ebmRadio-iosUITests-frameworks.sh"; sourceTree = "<group>"; };
+		A46E2C916659FC58EB8561B0BE7B196D /* Pods-ebmRadio-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ebmRadio-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A7044E9864C77F627996788031D0EEBB /* Pods-ebmRadio-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ebmRadio-ios.release.xcconfig"; sourceTree = "<group>"; };
+		A7585395DBFBEC4E5DC3D2A4AD24DA8E /* Pods-ebmRadio-iosUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ebmRadio-iosUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A8A88C5535B7B41AAE5AF46FA93AB130 /* STKQueueEntry.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STKQueueEntry.m; path = StreamingKit/StreamingKit/STKQueueEntry.m; sourceTree = "<group>"; };
+		AD2EE02C82F0738B46F0B5D88DCC4714 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		AEAECE101652A1A3A69A23FD4742F4C3 /* Pods-ebmRadio-iosUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ebmRadio-iosUITests-resources.sh"; sourceTree = "<group>"; };
+		B1820536FBE2F2A469B4815FEF2138F9 /* STKDataSourceWrapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STKDataSourceWrapper.m; path = StreamingKit/StreamingKit/STKDataSourceWrapper.m; sourceTree = "<group>"; };
+		C05CD62E150CFB77A335717364AF33D3 /* StreamingKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StreamingKit-prefix.pch"; sourceTree = "<group>"; };
+		C0FE88167E6493F31EF3E6B4E28CC186 /* Pods-ebmRadio-ios-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ebmRadio-ios-resources.sh"; sourceTree = "<group>"; };
+		C302D067029BEE45538D59C788F6D1BA /* Pods-ebmRadio-ios-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ebmRadio-ios-frameworks.sh"; sourceTree = "<group>"; };
+		C69F034C66522C94ACA0922A7A038EC8 /* Pods_ebmRadio_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ebmRadio_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB932112EB065C14FA9DF65647966449 /* StreamingKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "StreamingKit-dummy.m"; sourceTree = "<group>"; };
+		CE30F8C8BF24F886D00F998873DAC70B /* STKHTTPDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STKHTTPDataSource.h; path = StreamingKit/StreamingKit/STKHTTPDataSource.h; sourceTree = "<group>"; };
+		D2B9F0397C31AD16ED20A04A31767F1D /* STKAudioPlayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STKAudioPlayer.m; path = StreamingKit/StreamingKit/STKAudioPlayer.m; sourceTree = "<group>"; };
+		D9B5A531EAB440FE4DB265F463D76A42 /* Pods-ebmRadio-iosTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ebmRadio-iosTests.modulemap"; sourceTree = "<group>"; };
+		DE6576EBF69451CF9844FEEB95DB404C /* STKAudioPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STKAudioPlayer.h; path = StreamingKit/StreamingKit/STKAudioPlayer.h; sourceTree = "<group>"; };
+		E2165711F9979CCB701B57806725B498 /* Pods-ebmRadio-iosUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ebmRadio-iosUITests.modulemap"; sourceTree = "<group>"; };
+		E5C3AD710C6489F50CE1DF3DA4FDB88E /* Pods-ebmRadio-iosUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ebmRadio-iosUITests-umbrella.h"; sourceTree = "<group>"; };
+		E7CEF886328CA78C490429E1B00F7122 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		EB11088A856D5AADF52DCA2489577430 /* STKDataSourceWrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STKDataSourceWrapper.h; path = StreamingKit/StreamingKit/STKDataSourceWrapper.h; sourceTree = "<group>"; };
+		EE290936E47B9E21D2C513D982819DB2 /* STKCoreFoundationDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STKCoreFoundationDataSource.h; path = StreamingKit/StreamingKit/STKCoreFoundationDataSource.h; sourceTree = "<group>"; };
+		EFFD119B3B43957B3292D86FFEF144FE /* Pods_ebmRadio_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ebmRadio_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0355DCFEF98D602139A2E6D30185195 /* StreamingKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = StreamingKit.modulemap; sourceTree = "<group>"; };
+		F2D89D834C15880EB823D73A1C6F82C1 /* Pods-ebmRadio-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ebmRadio-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FD11F8B9D5DFF074BA7C2A1D8D6CD017 /* NSMutableArray+STKAudioPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+STKAudioPlayer.h"; path = "StreamingKit/StreamingKit/NSMutableArray+STKAudioPlayer.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		11CA0A6E3FC0D75C279D28675AB6433D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61219656A928901F391E76ADF0EDFB46 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27B048EB9DAF37AF29106FF390874939 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23AB268B537E567E8D9A6C11143B56BD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3605D6DDB91EE3F77141465697E29B87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C90AFDB235F2ADFF693EDF3C1F4154F /* AudioToolbox.framework in Frameworks */,
+				D5EBF2FAE8DA5EE9D804C8BBCCAF4DB1 /* CFNetwork.framework in Frameworks */,
+				071CF17DA4C0318ABCDD013D2250731A /* CoreFoundation.framework in Frameworks */,
+				8E7BEC400B36C658CC60A6FAA0E1EDF4 /* Foundation.framework in Frameworks */,
+				3BFE02EC9AECDC6FBBF6E64F639AEC50 /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FAFCE854FAF7020B834BF146C2181A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAD663E3316D1915398B3F9E30E8C7DE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		137E5BB2714612BC9E27AD8FF222F024 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EFFD119B3B43957B3292D86FFEF144FE /* Pods_ebmRadio_ios.framework */,
+				C69F034C66522C94ACA0922A7A038EC8 /* Pods_ebmRadio_iosTests.framework */,
+				9EF98F6D8CB6CE3CE20A06E21B4C3BC9 /* Pods_ebmRadio_iosUITests.framework */,
+				07FDC5EA3B5DE63B6C95106C2C1C9E3C /* StreamingKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		16FC6FB26258D52DFCFF876A75EF40FC /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				9B3F2BAF355C430FB1ADDFF2DC7B26E3 /* AudioToolbox.framework */,
+				4961FDA37C5D3F3C7AACCB0A93FB73F4 /* CFNetwork.framework */,
+				AD2EE02C82F0738B46F0B5D88DCC4714 /* CoreFoundation.framework */,
+				5E901389EA02ACC9AF6A580A51F072D3 /* Foundation.framework */,
+				E7CEF886328CA78C490429E1B00F7122 /* SystemConfiguration.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		1924CDBEFD8BA35C60153FB370499920 /* StreamingKit */ = {
+			isa = PBXGroup;
+			children = (
+				FD11F8B9D5DFF074BA7C2A1D8D6CD017 /* NSMutableArray+STKAudioPlayer.h */,
+				1DD3D6C91EADFC882F537BE160FA2629 /* NSMutableArray+STKAudioPlayer.m */,
+				DE6576EBF69451CF9844FEEB95DB404C /* STKAudioPlayer.h */,
+				D2B9F0397C31AD16ED20A04A31767F1D /* STKAudioPlayer.m */,
+				7FBD4122083B3A9FC7D8C57C94E33BBE /* STKAutoRecoveringHTTPDataSource.h */,
+				00B3B9A4608A76176410C4720DE21A0E /* STKAutoRecoveringHTTPDataSource.m */,
+				EE290936E47B9E21D2C513D982819DB2 /* STKCoreFoundationDataSource.h */,
+				1FE663B0781343F5B1C64A344AA436EB /* STKCoreFoundationDataSource.m */,
+				5C35E8837A8CE796877C75FFE87FF7E1 /* STKDataSource.h */,
+				54C49AA4B8477911682AEBA99E10A7FE /* STKDataSource.m */,
+				EB11088A856D5AADF52DCA2489577430 /* STKDataSourceWrapper.h */,
+				B1820536FBE2F2A469B4815FEF2138F9 /* STKDataSourceWrapper.m */,
+				CE30F8C8BF24F886D00F998873DAC70B /* STKHTTPDataSource.h */,
+				79138790A5C8F0284A90EC92CC1F3BB2 /* STKHTTPDataSource.m */,
+				0F34228837D0789E45C01871036D5469 /* STKLocalFileDataSource.h */,
+				5CC9E01CF08568B985FED4DD5A193381 /* STKLocalFileDataSource.m */,
+				2C5BC4013C78608BADA185244C0D568F /* STKQueueEntry.h */,
+				A8A88C5535B7B41AAE5AF46FA93AB130 /* STKQueueEntry.m */,
+				25EB467E0AD1D44D9C0E229F34C7FAE0 /* Support Files */,
+			);
+			path = StreamingKit;
+			sourceTree = "<group>";
+		};
+		20B56609144CE204DFA8221F742B2D76 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				16FC6FB26258D52DFCFF876A75EF40FC /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		25EB467E0AD1D44D9C0E229F34C7FAE0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0E59F032E4C4D4102586354D4B1BFAEB /* Info.plist */,
+				F0355DCFEF98D602139A2E6D30185195 /* StreamingKit.modulemap */,
+				0875F777F58E7EB2EEAB178452DD17CA /* StreamingKit.xcconfig */,
+				CB932112EB065C14FA9DF65647966449 /* StreamingKit-dummy.m */,
+				C05CD62E150CFB77A335717364AF33D3 /* StreamingKit-prefix.pch */,
+				76CF349AC563DEFDF339490C9F975C97 /* StreamingKit-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/StreamingKit";
+			sourceTree = "<group>";
+		};
+		55E1F0F4226335DD634B98B88E86D0F9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1924CDBEFD8BA35C60153FB370499920 /* StreamingKit */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				20B56609144CE204DFA8221F742B2D76 /* Frameworks */,
+				55E1F0F4226335DD634B98B88E86D0F9 /* Pods */,
+				137E5BB2714612BC9E27AD8FF222F024 /* Products */,
+				CA372B79FAB75398AE4FB331D36A1129 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		9BB5402D5C7776B6DD81C52BA4111C4D /* Pods-ebmRadio-iosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				53455DB7EF7922D5FD38A78EADC0A744 /* Info.plist */,
+				E2165711F9979CCB701B57806725B498 /* Pods-ebmRadio-iosUITests.modulemap */,
+				A7585395DBFBEC4E5DC3D2A4AD24DA8E /* Pods-ebmRadio-iosUITests-acknowledgements.markdown */,
+				90DE3CE00E4EF9347644AA4F780E796E /* Pods-ebmRadio-iosUITests-acknowledgements.plist */,
+				6CE47B05C7A18A5CA94100C4051F51CA /* Pods-ebmRadio-iosUITests-dummy.m */,
+				A2ECDFC2FDE8C9519FBACB2BDA26876F /* Pods-ebmRadio-iosUITests-frameworks.sh */,
+				AEAECE101652A1A3A69A23FD4742F4C3 /* Pods-ebmRadio-iosUITests-resources.sh */,
+				E5C3AD710C6489F50CE1DF3DA4FDB88E /* Pods-ebmRadio-iosUITests-umbrella.h */,
+				A46E2C916659FC58EB8561B0BE7B196D /* Pods-ebmRadio-iosUITests.debug.xcconfig */,
+				364A003416E742ADFF33E5938610D04E /* Pods-ebmRadio-iosUITests.release.xcconfig */,
+			);
+			name = "Pods-ebmRadio-iosUITests";
+			path = "Target Support Files/Pods-ebmRadio-iosUITests";
+			sourceTree = "<group>";
+		};
+		C8977273684AC9737F30C5141BF5DE00 /* Pods-ebmRadio-iosTests */ = {
+			isa = PBXGroup;
+			children = (
+				0478EC2278CE7FEABEC3C1AF4DFD98CE /* Info.plist */,
+				D9B5A531EAB440FE4DB265F463D76A42 /* Pods-ebmRadio-iosTests.modulemap */,
+				741D4F3F3C6FE5DD24F8C87998814593 /* Pods-ebmRadio-iosTests-acknowledgements.markdown */,
+				99857212CE38678FF66A8F834E054E91 /* Pods-ebmRadio-iosTests-acknowledgements.plist */,
+				5D636D089E9A4FA9371EABB67217EC7D /* Pods-ebmRadio-iosTests-dummy.m */,
+				5FCA885CAA04298EA2C6662F9B05BA49 /* Pods-ebmRadio-iosTests-frameworks.sh */,
+				4AD0E770AE2036A78F19468D7DEFE437 /* Pods-ebmRadio-iosTests-resources.sh */,
+				57C6D295235224AAAD93A2A5A0932F57 /* Pods-ebmRadio-iosTests-umbrella.h */,
+				F2D89D834C15880EB823D73A1C6F82C1 /* Pods-ebmRadio-iosTests.debug.xcconfig */,
+				04E0554540BCD101A92DE30588C0E680 /* Pods-ebmRadio-iosTests.release.xcconfig */,
+			);
+			name = "Pods-ebmRadio-iosTests";
+			path = "Target Support Files/Pods-ebmRadio-iosTests";
+			sourceTree = "<group>";
+		};
+		CA372B79FAB75398AE4FB331D36A1129 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FFDABB767D8DFB7BB1A98734096C1187 /* Pods-ebmRadio-ios */,
+				C8977273684AC9737F30C5141BF5DE00 /* Pods-ebmRadio-iosTests */,
+				9BB5402D5C7776B6DD81C52BA4111C4D /* Pods-ebmRadio-iosUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		FFDABB767D8DFB7BB1A98734096C1187 /* Pods-ebmRadio-ios */ = {
+			isa = PBXGroup;
+			children = (
+				46EF1DA0EC00915C1B373CF768602CDA /* Info.plist */,
+				1862491DDFC43DC0EF47C1AC89E4D10A /* Pods-ebmRadio-ios.modulemap */,
+				211C4339CC99807BD43795659680B068 /* Pods-ebmRadio-ios-acknowledgements.markdown */,
+				05DC5530A75793FAC41598524B0CC1D1 /* Pods-ebmRadio-ios-acknowledgements.plist */,
+				0381AEEA1883B777229C35E3357FC280 /* Pods-ebmRadio-ios-dummy.m */,
+				C302D067029BEE45538D59C788F6D1BA /* Pods-ebmRadio-ios-frameworks.sh */,
+				C0FE88167E6493F31EF3E6B4E28CC186 /* Pods-ebmRadio-ios-resources.sh */,
+				57313512472CA7A62FCBAAFDF2BFC9E7 /* Pods-ebmRadio-ios-umbrella.h */,
+				18216338E047029B51AF232E3B2C4637 /* Pods-ebmRadio-ios.debug.xcconfig */,
+				A7044E9864C77F627996788031D0EEBB /* Pods-ebmRadio-ios.release.xcconfig */,
+			);
+			name = "Pods-ebmRadio-ios";
+			path = "Target Support Files/Pods-ebmRadio-ios";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4CAF500A9E793FC304E9AA42B91958F4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B84F4ADEB0BA3E9D09F0EB6348A77B3 /* NSMutableArray+STKAudioPlayer.h in Headers */,
+				6A306556A7657E93357D07C0A1E0D9DA /* STKAudioPlayer.h in Headers */,
+				7CED2301F7D42A36DB878AE7AF61ED10 /* STKAutoRecoveringHTTPDataSource.h in Headers */,
+				C5CAB34D74CC0C108D28BE1B6C333A62 /* STKCoreFoundationDataSource.h in Headers */,
+				44B241A60D5555A4446EE0452A85A326 /* STKDataSource.h in Headers */,
+				2ED4A0402420AECE4138A85B96BB0B73 /* STKDataSourceWrapper.h in Headers */,
+				9F54A9667E73FE85A75FD418CC7844B4 /* STKHTTPDataSource.h in Headers */,
+				396F76436E1E49F13EDAA6B1234E36AA /* STKLocalFileDataSource.h in Headers */,
+				94BA1818D62EAE6DC6392651D1C25C10 /* STKQueueEntry.h in Headers */,
+				533FD63A0A5B2126213E9CD1EE36DA61 /* StreamingKit-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90950980ACCCB54CCC6F36F31798325B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D8826BFAEDA2B2272C87DB83173933C /* Pods-ebmRadio-iosUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9330BC2D0A17222A7EB9FBB9D226B84A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3EBC9183F9FD4A960B57CE0B444E9E1 /* Pods-ebmRadio-iosTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B98D7FB5419AE15C537A11699185B1B1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2949251FAD860B239AC6A60FB8C07A47 /* Pods-ebmRadio-ios-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		231EB13B9E674815414FE3882BBE2A3B /* StreamingKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 868307FB3191F0432F86EBA8DB2C0FAB /* Build configuration list for PBXNativeTarget "StreamingKit" */;
+			buildPhases = (
+				CFE4C6B3C2E02D852DDABC489FE5D1FA /* Sources */,
+				3605D6DDB91EE3F77141465697E29B87 /* Frameworks */,
+				4CAF500A9E793FC304E9AA42B91958F4 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StreamingKit;
+			productName = StreamingKit;
+			productReference = 07FDC5EA3B5DE63B6C95106C2C1C9E3C /* StreamingKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		85CCCFCF5A75D6EB2C7C6CD003577465 /* Pods-ebmRadio-iosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E12FDF800E3ECD5250CA16C30DCE888 /* Build configuration list for PBXNativeTarget "Pods-ebmRadio-iosTests" */;
+			buildPhases = (
+				72F185324E1A470E32CC931F27F69898 /* Sources */,
+				27B048EB9DAF37AF29106FF390874939 /* Frameworks */,
+				9330BC2D0A17222A7EB9FBB9D226B84A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-ebmRadio-iosTests";
+			productName = "Pods-ebmRadio-iosTests";
+			productReference = C69F034C66522C94ACA0922A7A038EC8 /* Pods_ebmRadio_iosTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B83193A41D62B07E18318D712EBBA26D /* Pods-ebmRadio-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D305E8E6DDC393A994B3F7EA87991EA /* Build configuration list for PBXNativeTarget "Pods-ebmRadio-ios" */;
+			buildPhases = (
+				E5A4AD24A5760A3E7B518151DFE1F0B2 /* Sources */,
+				8FAFCE854FAF7020B834BF146C2181A5 /* Frameworks */,
+				B98D7FB5419AE15C537A11699185B1B1 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C20689CF717A61940533266A44645068 /* PBXTargetDependency */,
+			);
+			name = "Pods-ebmRadio-ios";
+			productName = "Pods-ebmRadio-ios";
+			productReference = EFFD119B3B43957B3292D86FFEF144FE /* Pods_ebmRadio_ios.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F97CE2BA2AA1A9FAE93C9395E4EFD0A8 /* Pods-ebmRadio-iosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B9EDED6511374684F3940814F2D0490 /* Build configuration list for PBXNativeTarget "Pods-ebmRadio-iosUITests" */;
+			buildPhases = (
+				A431661E0A984D7893A82D24D42E5162 /* Sources */,
+				11CA0A6E3FC0D75C279D28675AB6433D /* Frameworks */,
+				90950980ACCCB54CCC6F36F31798325B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-ebmRadio-iosUITests";
+			productName = "Pods-ebmRadio-iosUITests";
+			productReference = 9EF98F6D8CB6CE3CE20A06E21B4C3BC9 /* Pods_ebmRadio_iosUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 137E5BB2714612BC9E27AD8FF222F024 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B83193A41D62B07E18318D712EBBA26D /* Pods-ebmRadio-ios */,
+				85CCCFCF5A75D6EB2C7C6CD003577465 /* Pods-ebmRadio-iosTests */,
+				F97CE2BA2AA1A9FAE93C9395E4EFD0A8 /* Pods-ebmRadio-iosUITests */,
+				231EB13B9E674815414FE3882BBE2A3B /* StreamingKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		72F185324E1A470E32CC931F27F69898 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30349E0D973E97CFA4FDC1BE5D2DC37D /* Pods-ebmRadio-iosTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A431661E0A984D7893A82D24D42E5162 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AFCE40ABEF394B85792C311888D4BB9 /* Pods-ebmRadio-iosUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFE4C6B3C2E02D852DDABC489FE5D1FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A24FC1603626BE55B2221A7E3E76BD8 /* NSMutableArray+STKAudioPlayer.m in Sources */,
+				F5457421B58C965EAC60AB93C661D82A /* STKAudioPlayer.m in Sources */,
+				0B81BBA554A89212A9BE8BDC8662EA1C /* STKAutoRecoveringHTTPDataSource.m in Sources */,
+				577B2BB89BDA09CE53C93A6C648EA187 /* STKCoreFoundationDataSource.m in Sources */,
+				C5A994EFF3B423CFC288496AFEF5EA64 /* STKDataSource.m in Sources */,
+				A85C9E7C6B28D7D40C2A575B592E7D5A /* STKDataSourceWrapper.m in Sources */,
+				3AD3D0B27041BF52A2B8C993FEECC16D /* STKHTTPDataSource.m in Sources */,
+				B45547DD5E2E2AE4B5DA0DE38FD665C5 /* STKLocalFileDataSource.m in Sources */,
+				84CCBD6195397D3DD896F272F89E6A9A /* STKQueueEntry.m in Sources */,
+				ADED6F115CCCD596EEA20E213B757490 /* StreamingKit-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5A4AD24A5760A3E7B518151DFE1F0B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D741E5DF6C192138C8503AB3B6E449E1 /* Pods-ebmRadio-ios-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C20689CF717A61940533266A44645068 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = StreamingKit;
+			target = 231EB13B9E674815414FE3882BBE2A3B /* StreamingKit */;
+			targetProxy = 846624ACB2D5D2C093C2B632A6864C63 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1057C37D054AE6B56516C82D76EA15E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7044E9864C77F627996788031D0EEBB /* Pods-ebmRadio-ios.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ebmRadio-ios/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ebmRadio-ios/Pods-ebmRadio-ios.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ebmRadio_ios;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		235C16314F6637E495C1D3F8153AA477 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04E0554540BCD101A92DE30588C0E680 /* Pods-ebmRadio-iosTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ebmRadio-iosTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ebmRadio-iosTests/Pods-ebmRadio-iosTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ebmRadio_iosTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3946A080DDA1986896F360E443E04EA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0875F777F58E7EB2EEAB178452DD17CA /* StreamingKit.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/StreamingKit/StreamingKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/StreamingKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/StreamingKit/StreamingKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = StreamingKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3FA451D268613890FA8A5A03801E11D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4FA43481CC17CAAA0D0F7D092782CC6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 364A003416E742ADFF33E5938610D04E /* Pods-ebmRadio-iosUITests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ebmRadio-iosUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ebmRadio-iosUITests/Pods-ebmRadio-iosUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ebmRadio_iosUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5E62115DE8C09934BF8D2FE5D15FED1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		5EE48549C360177FC04447218629B76E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2D89D834C15880EB823D73A1C6F82C1 /* Pods-ebmRadio-iosTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ebmRadio-iosTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ebmRadio-iosTests/Pods-ebmRadio-iosTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ebmRadio_iosTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		698C14187B860E2A2DF745F12180CF2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0875F777F58E7EB2EEAB178452DD17CA /* StreamingKit.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/StreamingKit/StreamingKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/StreamingKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/StreamingKit/StreamingKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = StreamingKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C717DB471AA44E0E04F3F1D929664692 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18216338E047029B51AF232E3B2C4637 /* Pods-ebmRadio-ios.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ebmRadio-ios/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ebmRadio-ios/Pods-ebmRadio-ios.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ebmRadio_ios;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E103CB2DA69B71BEC8954C4027B03AAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A46E2C916659FC58EB8561B0BE7B196D /* Pods-ebmRadio-iosUITests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ebmRadio-iosUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ebmRadio-iosUITests/Pods-ebmRadio-iosUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ebmRadio_iosUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E62115DE8C09934BF8D2FE5D15FED1E /* Debug */,
+				3FA451D268613890FA8A5A03801E11D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D305E8E6DDC393A994B3F7EA87991EA /* Build configuration list for PBXNativeTarget "Pods-ebmRadio-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C717DB471AA44E0E04F3F1D929664692 /* Debug */,
+				1057C37D054AE6B56516C82D76EA15E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B9EDED6511374684F3940814F2D0490 /* Build configuration list for PBXNativeTarget "Pods-ebmRadio-iosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E103CB2DA69B71BEC8954C4027B03AAE /* Debug */,
+				4FA43481CC17CAAA0D0F7D092782CC6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		868307FB3191F0432F86EBA8DB2C0FAB /* Build configuration list for PBXNativeTarget "StreamingKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3946A080DDA1986896F360E443E04EA7 /* Debug */,
+				698C14187B860E2A2DF745F12180CF2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E12FDF800E3ECD5250CA16C30DCE888 /* Build configuration list for PBXNativeTarget "Pods-ebmRadio-iosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EE48549C360177FC04447218629B76E /* Debug */,
+				235C16314F6637E495C1D3F8153AA477 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

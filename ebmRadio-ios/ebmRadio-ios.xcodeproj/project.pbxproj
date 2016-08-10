@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		548F3919B4264CAAD2AF0A7D /* Pods_ebmRadio_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E366C6658932D2CE87CD1815 /* Pods_ebmRadio_ios.framework */; };
+		7517C76EF41511C9D5320AA2 /* Pods_ebmRadio_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC2DDB312C2CC375AC588355 /* Pods_ebmRadio_iosTests.framework */; };
 		992E2C881D5B7E6D00681FCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992E2C871D5B7E6D00681FCE /* AppDelegate.swift */; };
 		992E2C8A1D5B7E6D00681FCE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992E2C891D5B7E6D00681FCE /* ViewController.swift */; };
 		992E2C8D1D5B7E6D00681FCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 992E2C8B1D5B7E6D00681FCE /* Main.storyboard */; };
@@ -14,6 +16,7 @@
 		992E2C921D5B7E6D00681FCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 992E2C901D5B7E6D00681FCE /* LaunchScreen.storyboard */; };
 		992E2C9D1D5B7E6D00681FCE /* ebmRadio_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992E2C9C1D5B7E6D00681FCE /* ebmRadio_iosTests.swift */; };
 		992E2CA81D5B7E6E00681FCE /* ebmRadio_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992E2CA71D5B7E6E00681FCE /* ebmRadio_iosUITests.swift */; };
+		AB5A8F5384B05157484D71DB /* Pods_ebmRadio_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9971AA9035BB4B44F6294914 /* Pods_ebmRadio_iosUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		500367A593A40B35BAA4F32C /* Pods-ebmRadio-iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ebmRadio-iosUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ebmRadio-iosUITests/Pods-ebmRadio-iosUITests.release.xcconfig"; sourceTree = "<group>"; };
+		792F30BA8056B8756BC84889 /* Pods-ebmRadio-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ebmRadio-iosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ebmRadio-iosTests/Pods-ebmRadio-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		88957CF189F466B10318DE2C /* Pods-ebmRadio-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ebmRadio-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ebmRadio-ios/Pods-ebmRadio-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		992E2C841D5B7E6D00681FCE /* ebmRadio-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ebmRadio-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		992E2C871D5B7E6D00681FCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		992E2C891D5B7E6D00681FCE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +53,12 @@
 		992E2CA31D5B7E6E00681FCE /* ebmRadio-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ebmRadio-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		992E2CA71D5B7E6E00681FCE /* ebmRadio_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ebmRadio_iosUITests.swift; sourceTree = "<group>"; };
 		992E2CA91D5B7E6E00681FCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9971AA9035BB4B44F6294914 /* Pods_ebmRadio_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ebmRadio_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC2DDB312C2CC375AC588355 /* Pods_ebmRadio_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ebmRadio_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBE0A9ADF59CAB968379ABE8 /* Pods-ebmRadio-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ebmRadio-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-ebmRadio-ios/Pods-ebmRadio-ios.release.xcconfig"; sourceTree = "<group>"; };
+		D286F3739A08311DF01E0A71 /* Pods-ebmRadio-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ebmRadio-iosUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ebmRadio-iosUITests/Pods-ebmRadio-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E366C6658932D2CE87CD1815 /* Pods_ebmRadio_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ebmRadio_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6121E52D265755B0D4F7EF2 /* Pods-ebmRadio-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ebmRadio-iosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ebmRadio-iosTests/Pods-ebmRadio-iosTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				548F3919B4264CAAD2AF0A7D /* Pods_ebmRadio_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7517C76EF41511C9D5320AA2 /* Pods_ebmRadio_iosTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +82,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB5A8F5384B05157484D71DB /* Pods_ebmRadio_iosUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FE10130294A884B116B8477 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				88957CF189F466B10318DE2C /* Pods-ebmRadio-ios.debug.xcconfig */,
+				CBE0A9ADF59CAB968379ABE8 /* Pods-ebmRadio-ios.release.xcconfig */,
+				792F30BA8056B8756BC84889 /* Pods-ebmRadio-iosTests.debug.xcconfig */,
+				F6121E52D265755B0D4F7EF2 /* Pods-ebmRadio-iosTests.release.xcconfig */,
+				D286F3739A08311DF01E0A71 /* Pods-ebmRadio-iosUITests.debug.xcconfig */,
+				500367A593A40B35BAA4F32C /* Pods-ebmRadio-iosUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		992E2C7B1D5B7E6D00681FCE = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +109,8 @@
 				992E2C9B1D5B7E6D00681FCE /* ebmRadio-iosTests */,
 				992E2CA61D5B7E6E00681FCE /* ebmRadio-iosUITests */,
 				992E2C851D5B7E6D00681FCE /* Products */,
+				3FE10130294A884B116B8477 /* Pods */,
+				9C4C9D78A45A90B442C724A8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +127,7 @@
 		992E2C861D5B7E6D00681FCE /* ebmRadio-ios */ = {
 			isa = PBXGroup;
 			children = (
+				992E2CB51D5B7F5A00681FCE /* Services */,
 				992E2C871D5B7E6D00681FCE /* AppDelegate.swift */,
 				992E2C891D5B7E6D00681FCE /* ViewController.swift */,
 				992E2C8B1D5B7E6D00681FCE /* Main.storyboard */,
@@ -125,6 +156,23 @@
 			path = "ebmRadio-iosUITests";
 			sourceTree = "<group>";
 		};
+		992E2CB51D5B7F5A00681FCE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		9C4C9D78A45A90B442C724A8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E366C6658932D2CE87CD1815 /* Pods_ebmRadio_ios.framework */,
+				BC2DDB312C2CC375AC588355 /* Pods_ebmRadio_iosTests.framework */,
+				9971AA9035BB4B44F6294914 /* Pods_ebmRadio_iosUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +180,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 992E2CAC1D5B7E6E00681FCE /* Build configuration list for PBXNativeTarget "ebmRadio-ios" */;
 			buildPhases = (
+				ACB9D772ADFD6DCCB95FA053 /* [CP] Check Pods Manifest.lock */,
 				992E2C801D5B7E6D00681FCE /* Sources */,
 				992E2C811D5B7E6D00681FCE /* Frameworks */,
 				992E2C821D5B7E6D00681FCE /* Resources */,
+				D94BA0BAB4EF29633F022287 /* [CP] Embed Pods Frameworks */,
+				314790C3C073C720455ED5E8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +200,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 992E2CAF1D5B7E6E00681FCE /* Build configuration list for PBXNativeTarget "ebmRadio-iosTests" */;
 			buildPhases = (
+				232D7C7E38F4370827D92613 /* [CP] Check Pods Manifest.lock */,
 				992E2C941D5B7E6D00681FCE /* Sources */,
 				992E2C951D5B7E6D00681FCE /* Frameworks */,
 				992E2C961D5B7E6D00681FCE /* Resources */,
+				BE74BAC333A739232E717CA8 /* [CP] Embed Pods Frameworks */,
+				265E5B5C39A6D25D8AE96B78 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +221,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 992E2CB21D5B7E6E00681FCE /* Build configuration list for PBXNativeTarget "ebmRadio-iosUITests" */;
 			buildPhases = (
+				D870F8ECA4C28FE73149C7FA /* [CP] Check Pods Manifest.lock */,
 				992E2C9F1D5B7E6E00681FCE /* Sources */,
 				992E2CA01D5B7E6E00681FCE /* Frameworks */,
 				992E2CA11D5B7E6E00681FCE /* Resources */,
+				6AB529480CC0FC2FFB370D2D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,6 +306,129 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		232D7C7E38F4370827D92613 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		265E5B5C39A6D25D8AE96B78 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ebmRadio-iosTests/Pods-ebmRadio-iosTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		314790C3C073C720455ED5E8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ebmRadio-ios/Pods-ebmRadio-ios-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6AB529480CC0FC2FFB370D2D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ebmRadio-iosUITests/Pods-ebmRadio-iosUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACB9D772ADFD6DCCB95FA053 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BE74BAC333A739232E717CA8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ebmRadio-iosTests/Pods-ebmRadio-iosTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D870F8ECA4C28FE73149C7FA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D94BA0BAB4EF29633F022287 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ebmRadio-ios/Pods-ebmRadio-ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		992E2C801D5B7E6D00681FCE /* Sources */ = {
@@ -399,6 +578,7 @@
 		};
 		992E2CAD1D5B7E6E00681FCE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88957CF189F466B10318DE2C /* Pods-ebmRadio-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "ebmRadio-ios/Info.plist";
@@ -410,6 +590,7 @@
 		};
 		992E2CAE1D5B7E6E00681FCE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBE0A9ADF59CAB968379ABE8 /* Pods-ebmRadio-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "ebmRadio-ios/Info.plist";
@@ -421,6 +602,7 @@
 		};
 		992E2CB01D5B7E6E00681FCE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 792F30BA8056B8756BC84889 /* Pods-ebmRadio-iosTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "ebmRadio-iosTests/Info.plist";
@@ -433,6 +615,7 @@
 		};
 		992E2CB11D5B7E6E00681FCE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6121E52D265755B0D4F7EF2 /* Pods-ebmRadio-iosTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "ebmRadio-iosTests/Info.plist";
@@ -445,6 +628,7 @@
 		};
 		992E2CB31D5B7E6E00681FCE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D286F3739A08311DF01E0A71 /* Pods-ebmRadio-iosUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "ebmRadio-iosUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -456,6 +640,7 @@
 		};
 		992E2CB41D5B7E6E00681FCE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 500367A593A40B35BAA4F32C /* Pods-ebmRadio-iosUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "ebmRadio-iosUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -484,6 +669,7 @@
 				992E2CAE1D5B7E6E00681FCE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		992E2CAF1D5B7E6E00681FCE /* Build configuration list for PBXNativeTarget "ebmRadio-iosTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +678,7 @@
 				992E2CB11D5B7E6E00681FCE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		992E2CB21D5B7E6E00681FCE /* Build configuration list for PBXNativeTarget "ebmRadio-iosUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +687,7 @@
 				992E2CB41D5B7E6E00681FCE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
