@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		992E2C881D5B7E6D00681FCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992E2C871D5B7E6D00681FCE /* AppDelegate.swift */; };
+		992E2C8A1D5B7E6D00681FCE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992E2C891D5B7E6D00681FCE /* ViewController.swift */; };
+		992E2C8D1D5B7E6D00681FCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 992E2C8B1D5B7E6D00681FCE /* Main.storyboard */; };
+		992E2C8F1D5B7E6D00681FCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 992E2C8E1D5B7E6D00681FCE /* Assets.xcassets */; };
+		992E2C921D5B7E6D00681FCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 992E2C901D5B7E6D00681FCE /* LaunchScreen.storyboard */; };
+		992E2C9D1D5B7E6D00681FCE /* ebmRadio_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992E2C9C1D5B7E6D00681FCE /* ebmRadio_iosTests.swift */; };
+		992E2CA81D5B7E6E00681FCE /* ebmRadio_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992E2CA71D5B7E6E00681FCE /* ebmRadio_iosUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		992E2C991D5B7E6D00681FCE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 992E2C7C1D5B7E6D00681FCE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 992E2C831D5B7E6D00681FCE;
+			remoteInfo = "ebmRadio-ios";
+		};
+		992E2CA41D5B7E6E00681FCE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 992E2C7C1D5B7E6D00681FCE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 992E2C831D5B7E6D00681FCE;
+			remoteInfo = "ebmRadio-ios";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		992E2C841D5B7E6D00681FCE /* ebmRadio-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ebmRadio-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		992E2C871D5B7E6D00681FCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		992E2C891D5B7E6D00681FCE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		992E2C8C1D5B7E6D00681FCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		992E2C8E1D5B7E6D00681FCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		992E2C911D5B7E6D00681FCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		992E2C931D5B7E6D00681FCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		992E2C981D5B7E6D00681FCE /* ebmRadio-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ebmRadio-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		992E2C9C1D5B7E6D00681FCE /* ebmRadio_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ebmRadio_iosTests.swift; sourceTree = "<group>"; };
+		992E2C9E1D5B7E6E00681FCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		992E2CA31D5B7E6E00681FCE /* ebmRadio-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ebmRadio-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		992E2CA71D5B7E6E00681FCE /* ebmRadio_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ebmRadio_iosUITests.swift; sourceTree = "<group>"; };
+		992E2CA91D5B7E6E00681FCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		992E2C811D5B7E6D00681FCE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		992E2C951D5B7E6D00681FCE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		992E2CA01D5B7E6E00681FCE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		992E2C7B1D5B7E6D00681FCE = {
+			isa = PBXGroup;
+			children = (
+				992E2C861D5B7E6D00681FCE /* ebmRadio-ios */,
+				992E2C9B1D5B7E6D00681FCE /* ebmRadio-iosTests */,
+				992E2CA61D5B7E6E00681FCE /* ebmRadio-iosUITests */,
+				992E2C851D5B7E6D00681FCE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		992E2C851D5B7E6D00681FCE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				992E2C841D5B7E6D00681FCE /* ebmRadio-ios.app */,
+				992E2C981D5B7E6D00681FCE /* ebmRadio-iosTests.xctest */,
+				992E2CA31D5B7E6E00681FCE /* ebmRadio-iosUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		992E2C861D5B7E6D00681FCE /* ebmRadio-ios */ = {
+			isa = PBXGroup;
+			children = (
+				992E2C871D5B7E6D00681FCE /* AppDelegate.swift */,
+				992E2C891D5B7E6D00681FCE /* ViewController.swift */,
+				992E2C8B1D5B7E6D00681FCE /* Main.storyboard */,
+				992E2C8E1D5B7E6D00681FCE /* Assets.xcassets */,
+				992E2C901D5B7E6D00681FCE /* LaunchScreen.storyboard */,
+				992E2C931D5B7E6D00681FCE /* Info.plist */,
+			);
+			path = "ebmRadio-ios";
+			sourceTree = "<group>";
+		};
+		992E2C9B1D5B7E6D00681FCE /* ebmRadio-iosTests */ = {
+			isa = PBXGroup;
+			children = (
+				992E2C9C1D5B7E6D00681FCE /* ebmRadio_iosTests.swift */,
+				992E2C9E1D5B7E6E00681FCE /* Info.plist */,
+			);
+			path = "ebmRadio-iosTests";
+			sourceTree = "<group>";
+		};
+		992E2CA61D5B7E6E00681FCE /* ebmRadio-iosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				992E2CA71D5B7E6E00681FCE /* ebmRadio_iosUITests.swift */,
+				992E2CA91D5B7E6E00681FCE /* Info.plist */,
+			);
+			path = "ebmRadio-iosUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		992E2C831D5B7E6D00681FCE /* ebmRadio-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 992E2CAC1D5B7E6E00681FCE /* Build configuration list for PBXNativeTarget "ebmRadio-ios" */;
+			buildPhases = (
+				992E2C801D5B7E6D00681FCE /* Sources */,
+				992E2C811D5B7E6D00681FCE /* Frameworks */,
+				992E2C821D5B7E6D00681FCE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ebmRadio-ios";
+			productName = "ebmRadio-ios";
+			productReference = 992E2C841D5B7E6D00681FCE /* ebmRadio-ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+		992E2C971D5B7E6D00681FCE /* ebmRadio-iosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 992E2CAF1D5B7E6E00681FCE /* Build configuration list for PBXNativeTarget "ebmRadio-iosTests" */;
+			buildPhases = (
+				992E2C941D5B7E6D00681FCE /* Sources */,
+				992E2C951D5B7E6D00681FCE /* Frameworks */,
+				992E2C961D5B7E6D00681FCE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				992E2C9A1D5B7E6D00681FCE /* PBXTargetDependency */,
+			);
+			name = "ebmRadio-iosTests";
+			productName = "ebmRadio-iosTests";
+			productReference = 992E2C981D5B7E6D00681FCE /* ebmRadio-iosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		992E2CA21D5B7E6E00681FCE /* ebmRadio-iosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 992E2CB21D5B7E6E00681FCE /* Build configuration list for PBXNativeTarget "ebmRadio-iosUITests" */;
+			buildPhases = (
+				992E2C9F1D5B7E6E00681FCE /* Sources */,
+				992E2CA01D5B7E6E00681FCE /* Frameworks */,
+				992E2CA11D5B7E6E00681FCE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				992E2CA51D5B7E6E00681FCE /* PBXTargetDependency */,
+			);
+			name = "ebmRadio-iosUITests";
+			productName = "ebmRadio-iosUITests";
+			productReference = 992E2CA31D5B7E6E00681FCE /* ebmRadio-iosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		992E2C7C1D5B7E6D00681FCE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "George Zinyakov";
+				TargetAttributes = {
+					992E2C831D5B7E6D00681FCE = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					992E2C971D5B7E6D00681FCE = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 992E2C831D5B7E6D00681FCE;
+					};
+					992E2CA21D5B7E6E00681FCE = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 992E2C831D5B7E6D00681FCE;
+					};
+				};
+			};
+			buildConfigurationList = 992E2C7F1D5B7E6D00681FCE /* Build configuration list for PBXProject "ebmRadio-ios" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 992E2C7B1D5B7E6D00681FCE;
+			productRefGroup = 992E2C851D5B7E6D00681FCE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				992E2C831D5B7E6D00681FCE /* ebmRadio-ios */,
+				992E2C971D5B7E6D00681FCE /* ebmRadio-iosTests */,
+				992E2CA21D5B7E6E00681FCE /* ebmRadio-iosUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		992E2C821D5B7E6D00681FCE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				992E2C921D5B7E6D00681FCE /* LaunchScreen.storyboard in Resources */,
+				992E2C8F1D5B7E6D00681FCE /* Assets.xcassets in Resources */,
+				992E2C8D1D5B7E6D00681FCE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		992E2C961D5B7E6D00681FCE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		992E2CA11D5B7E6E00681FCE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		992E2C801D5B7E6D00681FCE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				992E2C8A1D5B7E6D00681FCE /* ViewController.swift in Sources */,
+				992E2C881D5B7E6D00681FCE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		992E2C941D5B7E6D00681FCE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				992E2C9D1D5B7E6D00681FCE /* ebmRadio_iosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		992E2C9F1D5B7E6E00681FCE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				992E2CA81D5B7E6E00681FCE /* ebmRadio_iosUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		992E2C9A1D5B7E6D00681FCE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 992E2C831D5B7E6D00681FCE /* ebmRadio-ios */;
+			targetProxy = 992E2C991D5B7E6D00681FCE /* PBXContainerItemProxy */;
+		};
+		992E2CA51D5B7E6E00681FCE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 992E2C831D5B7E6D00681FCE /* ebmRadio-ios */;
+			targetProxy = 992E2CA41D5B7E6E00681FCE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		992E2C8B1D5B7E6D00681FCE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				992E2C8C1D5B7E6D00681FCE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		992E2C901D5B7E6D00681FCE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				992E2C911D5B7E6D00681FCE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		992E2CAA1D5B7E6E00681FCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		992E2CAB1D5B7E6E00681FCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		992E2CAD1D5B7E6E00681FCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "ebmRadio-ios/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "George-Zinyakov.ebmRadio-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		992E2CAE1D5B7E6E00681FCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "ebmRadio-ios/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "George-Zinyakov.ebmRadio-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		992E2CB01D5B7E6E00681FCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "ebmRadio-iosTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "George-Zinyakov.ebmRadio-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ebmRadio-ios.app/ebmRadio-ios";
+			};
+			name = Debug;
+		};
+		992E2CB11D5B7E6E00681FCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "ebmRadio-iosTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "George-Zinyakov.ebmRadio-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ebmRadio-ios.app/ebmRadio-ios";
+			};
+			name = Release;
+		};
+		992E2CB31D5B7E6E00681FCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "ebmRadio-iosUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "George-Zinyakov.ebmRadio-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "ebmRadio-ios";
+			};
+			name = Debug;
+		};
+		992E2CB41D5B7E6E00681FCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "ebmRadio-iosUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "George-Zinyakov.ebmRadio-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "ebmRadio-ios";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		992E2C7F1D5B7E6D00681FCE /* Build configuration list for PBXProject "ebmRadio-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				992E2CAA1D5B7E6E00681FCE /* Debug */,
+				992E2CAB1D5B7E6E00681FCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		992E2CAC1D5B7E6E00681FCE /* Build configuration list for PBXNativeTarget "ebmRadio-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				992E2CAD1D5B7E6E00681FCE /* Debug */,
+				992E2CAE1D5B7E6E00681FCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		992E2CAF1D5B7E6E00681FCE /* Build configuration list for PBXNativeTarget "ebmRadio-iosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				992E2CB01D5B7E6E00681FCE /* Debug */,
+				992E2CB11D5B7E6E00681FCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		992E2CB21D5B7E6E00681FCE /* Build configuration list for PBXNativeTarget "ebmRadio-iosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				992E2CB31D5B7E6E00681FCE /* Debug */,
+				992E2CB41D5B7E6E00681FCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 992E2C7C1D5B7E6D00681FCE /* Project object */;
+}
