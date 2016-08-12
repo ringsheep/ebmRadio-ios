@@ -6,7 +6,6 @@ target 'ebmRadio-ios' do
   use_frameworks!
 
   # Pods for ebmRadio-ios
-  pod "StreamingKit"
 
   target 'ebmRadio-iosTests' do
     inherit! :search_paths
