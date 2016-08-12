@@ -6,7 +6,9 @@ target 'ebmRadio-ios' do
   use_frameworks!
 
   # Pods for ebmRadio-ios
-
+  pod 'RxSwift',    '~> 2.0'
+  pod 'RxCocoa',    '~> 2.0'
+  
   target 'ebmRadio-iosTests' do
     inherit! :search_paths
     # Pods for testing
