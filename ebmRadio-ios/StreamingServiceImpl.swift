@@ -7,14 +7,33 @@
 //
 
 import Foundation
-import StreamingKit
+import AVFoundation
 
 class StreamingServiceImpl: StreamingService {
     
-    func startStreaming() {
-        let audioPlayer = STKAudioPlayer()
-        
-        audioPlayer.play("http://ebm-radio.org:7000/listen.pls")
+    private var player = AVPlayer(URL: NSURL(string: "http://ebm-radio.org:7000/listen.pls")!)
+    var isPlaying = false
+    
+    func play() {
+        player.play()
+        isPlaying = true
+    }
+    
+    func pause() {
+        player.pause()
+        isPlaying = false
+    }
+    
+    func toggle() {
+        if isPlaying == true {
+            pause()
+        } else {
+            play()
+        }
+    }
+    
+    func currentlyPlaying() -> Bool {
+        return isPlaying
     }
     
 }

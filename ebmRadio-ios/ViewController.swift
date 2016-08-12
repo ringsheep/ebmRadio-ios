@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         streamingService = StreamingServiceImpl()
-        streamingService.startStreaming()
+        streamingService.play()
     }
 
 }
