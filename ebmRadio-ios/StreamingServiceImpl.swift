@@ -11,11 +11,13 @@ import AVFoundation
 
 class StreamingServiceImpl: StreamingService {
     
-    private var player = AVPlayer(URL: NSURL(string: "http://ebm-radio.org:7000/listen.pls")!)
+    private var player = AVPlayer(URL: NSURL(string: "http://87.106.138.241:7000/")!)
     var isPlaying = false
     
     func play() {
         player.play()
+        
+        print(player.currentItem?.tracks)
         isPlaying = true
     }
     

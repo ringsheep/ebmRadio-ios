@@ -11,8 +11,9 @@
 		7517C76EF41511C9D5320AA2 /* Pods_ebmRadio_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC2DDB312C2CC375AC588355 /* Pods_ebmRadio_iosTests.framework */; };
 		991BE6001D5B81AF00901903 /* StreamingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991BE5FF1D5B81AF00901903 /* StreamingService.swift */; };
 		991BE6021D5B81D600901903 /* StreamingServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991BE6011D5B81D600901903 /* StreamingServiceImpl.swift */; };
+		9923FFA41D63A2EA00F00BB2 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9923FFA31D63A2EA00F00BB2 /* MediaPlayer.framework */; };
 		992E2C881D5B7E6D00681FCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992E2C871D5B7E6D00681FCE /* AppDelegate.swift */; };
-		992E2C8A1D5B7E6D00681FCE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992E2C891D5B7E6D00681FCE /* ViewController.swift */; };
+		992E2C8A1D5B7E6D00681FCE /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992E2C891D5B7E6D00681FCE /* PlayerViewController.swift */; };
 		992E2C8D1D5B7E6D00681FCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 992E2C8B1D5B7E6D00681FCE /* Main.storyboard */; };
 		992E2C8F1D5B7E6D00681FCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 992E2C8E1D5B7E6D00681FCE /* Assets.xcassets */; };
 		992E2C921D5B7E6D00681FCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 992E2C901D5B7E6D00681FCE /* LaunchScreen.storyboard */; };
@@ -46,9 +47,10 @@
 		991BE5FF1D5B81AF00901903 /* StreamingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamingService.swift; sourceTree = "<group>"; };
 		991BE6011D5B81D600901903 /* StreamingServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamingServiceImpl.swift; sourceTree = "<group>"; };
 		991BE6031D5B827900901903 /* ebmRadio-ios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ebmRadio-ios-Bridging-Header.h"; sourceTree = "<group>"; };
+		9923FFA31D63A2EA00F00BB2 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		992E2C841D5B7E6D00681FCE /* ebmRadio-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ebmRadio-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		992E2C871D5B7E6D00681FCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		992E2C891D5B7E6D00681FCE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		992E2C891D5B7E6D00681FCE /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		992E2C8C1D5B7E6D00681FCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		992E2C8E1D5B7E6D00681FCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		992E2C911D5B7E6D00681FCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9923FFA41D63A2EA00F00BB2 /* MediaPlayer.framework in Frameworks */,
 				9987C6E91D5E35C300E3FD25 /* AVFoundation.framework in Frameworks */,
 				548F3919B4264CAAD2AF0A7D /* Pods_ebmRadio_ios.framework in Frameworks */,
 			);
@@ -137,7 +140,7 @@
 			children = (
 				992E2CB51D5B7F5A00681FCE /* Services */,
 				992E2C871D5B7E6D00681FCE /* AppDelegate.swift */,
-				992E2C891D5B7E6D00681FCE /* ViewController.swift */,
+				992E2C891D5B7E6D00681FCE /* PlayerViewController.swift */,
 				992E2C8B1D5B7E6D00681FCE /* Main.storyboard */,
 				992E2C8E1D5B7E6D00681FCE /* Assets.xcassets */,
 				992E2C901D5B7E6D00681FCE /* LaunchScreen.storyboard */,
@@ -177,6 +180,7 @@
 		9C4C9D78A45A90B442C724A8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9923FFA31D63A2EA00F00BB2 /* MediaPlayer.framework */,
 				9987C6E81D5E35C300E3FD25 /* AVFoundation.framework */,
 				E366C6658932D2CE87CD1815 /* Pods_ebmRadio_ios.framework */,
 				BC2DDB312C2CC375AC588355 /* Pods_ebmRadio_iosTests.framework */,
@@ -261,6 +265,7 @@
 				TargetAttributes = {
 					992E2C831D5B7E6D00681FCE = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = L738KA9SZ5;
 					};
 					992E2C971D5B7E6D00681FCE = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -447,7 +452,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				992E2C8A1D5B7E6D00681FCE /* ViewController.swift in Sources */,
+				992E2C8A1D5B7E6D00681FCE /* PlayerViewController.swift in Sources */,
 				991BE6001D5B81AF00901903 /* StreamingService.swift in Sources */,
 				991BE6021D5B81D600901903 /* StreamingServiceImpl.swift in Sources */,
 				992E2C881D5B7E6D00681FCE /* AppDelegate.swift in Sources */,
@@ -596,10 +601,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "ebmRadio-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "George-Zinyakov.ebmRadio-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ebmRadio-ios/ebmRadio-ios-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -611,10 +619,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "ebmRadio-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "George-Zinyakov.ebmRadio-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ebmRadio-ios/ebmRadio-ios-Bridging-Header.h";
 			};
 			name = Release;
