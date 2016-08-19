@@ -9,5 +9,7 @@
 import Foundation
 
 protocol StreamingService {
-    func startStreaming()
+    func play()
+    func pause()
+    func toggle()
 }
