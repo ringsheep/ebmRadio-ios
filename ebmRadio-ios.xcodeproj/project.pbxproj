@@ -11,7 +11,6 @@
 		7517C76EF41511C9D5320AA2 /* Pods_ebmRadio_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC2DDB312C2CC375AC588355 /* Pods_ebmRadio_iosTests.framework */; };
 		991BE6001D5B81AF00901903 /* StreamingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991BE5FF1D5B81AF00901903 /* StreamingService.swift */; };
 		991BE6021D5B81D600901903 /* StreamingServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991BE6011D5B81D600901903 /* StreamingServiceImpl.swift */; };
-		9923FFA41D63A2EA00F00BB2 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9923FFA31D63A2EA00F00BB2 /* MediaPlayer.framework */; };
 		992E2C881D5B7E6D00681FCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992E2C871D5B7E6D00681FCE /* AppDelegate.swift */; };
 		992E2C8A1D5B7E6D00681FCE /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992E2C891D5B7E6D00681FCE /* PlayerViewController.swift */; };
 		992E2C8D1D5B7E6D00681FCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 992E2C8B1D5B7E6D00681FCE /* Main.storyboard */; };
@@ -20,6 +19,9 @@
 		992E2C9D1D5B7E6D00681FCE /* ebmRadio_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992E2C9C1D5B7E6D00681FCE /* ebmRadio_iosTests.swift */; };
 		992E2CA81D5B7E6E00681FCE /* ebmRadio_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992E2CA71D5B7E6E00681FCE /* ebmRadio_iosUITests.swift */; };
 		9987C6E91D5E35C300E3FD25 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9987C6E81D5E35C300E3FD25 /* AVFoundation.framework */; };
+		99B651791D67545D00F353C5 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B651781D67545D00F353C5 /* Player.swift */; };
+		99B6517B1D67550800F353C5 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B6517A1D67550800F353C5 /* Track.swift */; };
+		99B6517D1D67590900F353C5 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99B6517C1D67590900F353C5 /* AVKit.framework */; };
 		AB5A8F5384B05157484D71DB /* Pods_ebmRadio_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9971AA9035BB4B44F6294914 /* Pods_ebmRadio_iosUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +65,9 @@
 		992E2CA91D5B7E6E00681FCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9971AA9035BB4B44F6294914 /* Pods_ebmRadio_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ebmRadio_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9987C6E81D5E35C300E3FD25 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		99B651781D67545D00F353C5 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		99B6517A1D67550800F353C5 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		99B6517C1D67590900F353C5 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		BC2DDB312C2CC375AC588355 /* Pods_ebmRadio_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ebmRadio_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBE0A9ADF59CAB968379ABE8 /* Pods-ebmRadio-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ebmRadio-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-ebmRadio-ios/Pods-ebmRadio-ios.release.xcconfig"; sourceTree = "<group>"; };
 		D286F3739A08311DF01E0A71 /* Pods-ebmRadio-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ebmRadio-iosUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ebmRadio-iosUITests/Pods-ebmRadio-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -75,7 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9923FFA41D63A2EA00F00BB2 /* MediaPlayer.framework in Frameworks */,
+				99B6517D1D67590900F353C5 /* AVKit.framework in Frameworks */,
 				9987C6E91D5E35C300E3FD25 /* AVFoundation.framework in Frameworks */,
 				548F3919B4264CAAD2AF0A7D /* Pods_ebmRadio_ios.framework in Frameworks */,
 			);
@@ -138,6 +143,7 @@
 		992E2C861D5B7E6D00681FCE /* ebmRadio-ios */ = {
 			isa = PBXGroup;
 			children = (
+				99B651771D67545200F353C5 /* Model */,
 				992E2CB51D5B7F5A00681FCE /* Services */,
 				992E2C871D5B7E6D00681FCE /* AppDelegate.swift */,
 				992E2C891D5B7E6D00681FCE /* PlayerViewController.swift */,
@@ -177,9 +183,19 @@
 			name = Services;
 			sourceTree = "<group>";
 		};
+		99B651771D67545200F353C5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				99B651781D67545D00F353C5 /* Player.swift */,
+				99B6517A1D67550800F353C5 /* Track.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		9C4C9D78A45A90B442C724A8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				99B6517C1D67590900F353C5 /* AVKit.framework */,
 				9923FFA31D63A2EA00F00BB2 /* MediaPlayer.framework */,
 				9987C6E81D5E35C300E3FD25 /* AVFoundation.framework */,
 				E366C6658932D2CE87CD1815 /* Pods_ebmRadio_ios.framework */,
@@ -455,7 +471,9 @@
 				992E2C8A1D5B7E6D00681FCE /* PlayerViewController.swift in Sources */,
 				991BE6001D5B81AF00901903 /* StreamingService.swift in Sources */,
 				991BE6021D5B81D600901903 /* StreamingServiceImpl.swift in Sources */,
+				99B651791D67545D00F353C5 /* Player.swift in Sources */,
 				992E2C881D5B7E6D00681FCE /* AppDelegate.swift in Sources */,
+				99B6517B1D67550800F353C5 /* Track.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

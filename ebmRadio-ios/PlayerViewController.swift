@@ -26,7 +26,7 @@ class PlayerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        streamingService = StreamingServiceImpl()
+        streamingService = StreamingServiceImpl(stationURL: "http://87.106.138.241:7000/")
         
         setUpLogoButton()
         setUpPlayButton()
@@ -35,7 +35,7 @@ class PlayerViewController: UIViewController {
             //            let image:UIImage = UIImage(named: "logo_player_background")!
             //            let albumArt = MPMediaItemArtwork(image: image)
             let songInfo = [
-                MPMediaItemPropertyTitle: "Radio Brasov",
+                MPMediaItemPropertyTitle: "EBM Radio",
                 MPMediaItemPropertyArtist: "87,8fm",
                 //                MPMediaItemPropertyArtwork: albumArt
             ]

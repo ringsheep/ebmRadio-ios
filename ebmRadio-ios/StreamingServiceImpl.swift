@@ -8,26 +8,40 @@
 
 import Foundation
 import AVFoundation
+import RxSwift
 
 class StreamingServiceImpl: StreamingService {
     
-    private var player = AVPlayer(URL: NSURL(string: "http://87.106.138.241:7000/")!)
-    var isPlaying = false
+    let player = Player()
+    
+    init(stationURL: String) {
+        
+        let newItem = AVPlayerItem(URL: NSURL(string: stationURL)!)
+        player.radio = AVPlayer(playerItem: newItem)
+        player.radio
+            .rx_observe(AnyObject.self, "timedMetadata", options: [.Initial, .New], retainSelf: false)
+            .subscribeNext { (object) in
+            
+            let data: AVPlayerItem = object as! AVPlayerItem
+            for item in data.timedMetadata! as [AVMetadataItem] {
+                print(item.value)
+            }
+            
+        }.dispose()
+    }
     
     func play() {
-        player.play()
-        
-        print(player.currentItem?.tracks)
-        isPlaying = true
+        player.radio.play()
+        player.isPlaying = true
     }
     
     func pause() {
-        player.pause()
-        isPlaying = false
+        player.radio.pause()
+        player.isPlaying = false
     }
     
     func toggle() {
-        if isPlaying == true {
+        if player.isPlaying == true {
             pause()
         } else {
             play()
@@ -35,7 +49,7 @@ class StreamingServiceImpl: StreamingService {
     }
     
     func currentlyPlaying() -> Bool {
-        return isPlaying
+        return player.isPlaying
     }
     
 }
