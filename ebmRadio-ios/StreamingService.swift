@@ -7,9 +7,12 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol StreamingService {
+    var player:Player { get set }
     func play()
     func pause()
     func toggle()
+    func currentlyPlaying() -> Observable<Track>
 }

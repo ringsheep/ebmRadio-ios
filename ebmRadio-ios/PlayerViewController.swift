@@ -17,19 +17,35 @@ class PlayerViewController: UIViewController {
     var disposeBag = DisposeBag()
     
     @IBOutlet weak var logoButton: UIButton!
-    @IBOutlet weak var trackLabel: UILabel!
+    @IBOutlet weak var trackArtistLabel: UILabel!
+    @IBOutlet weak var trackTitleLabel: UILabel!
     @IBOutlet weak var trackSlider: UISlider!
     @IBOutlet weak var streamLabel: UILabel!
     @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var waveformView: WaveformView!
     
     var streamingService:StreamingService!
 
+    var timer:NSTimer?
+    var change:CGFloat = 0.01
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         streamingService = StreamingServiceImpl(stationURL: "http://87.106.138.241:7000/")
         
         setUpLogoButton()
         setUpPlayButton()
+        
+//        streamingService.player.radio.currentItem?.rx_timedMetadata.subscribeNext({ (meta) in
+//            print(meta)
+//        })
+        streamingService.currentlyPlaying().subscribeNext { (track) in
+            self.trackArtistLabel.text = track.artist
+            self.trackTitleLabel.text = track.title
+        }
+        
+        self.waveformView.density = 1.0
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.009, target: self, selector: "refreshAudioView:", userInfo: nil, repeats: true)
         
         if NSClassFromString("MPNowPlayingInfoCenter") != nil {
             //            let image:UIImage = UIImage(named: "logo_player_background")!
@@ -48,6 +64,18 @@ class PlayerViewController: UIViewController {
         } catch {
             print("Audio Session error.\n")
         }
+    }
+    
+    internal func refreshAudioView(_:NSTimer) {
+        if self.waveformView.amplitude <= self.waveformView.idleAmplitude || self.waveformView.amplitude > 1.0 {
+            self.change *= -1.0
+        }
+        // Simply set the amplitude to whatever you need and the view will update itself.
+        self.waveformView.amplitude += self.change
+    }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
     }
     
     private func setUpLogoButton() {

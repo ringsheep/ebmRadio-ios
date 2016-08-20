@@ -13,6 +13,11 @@ class Track {
     var title: String = ""
     var artist: String = ""
     var artworkURL: String = ""
-    var artworkImage = UIImage(named: "albumArt")
+    var artworkImage = UIImage()
     var artworkLoaded = false
+    
+    init( artist: String, title: String ) {
+        self.artist = artist
+        self.title = title
+    }
 }

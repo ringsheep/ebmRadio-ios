@@ -12,22 +12,30 @@ import RxSwift
 
 class StreamingServiceImpl: StreamingService {
     
-    let player = Player()
+    var player:Player = Player()
     
     init(stationURL: String) {
         
         let newItem = AVPlayerItem(URL: NSURL(string: stationURL)!)
         player.radio = AVPlayer(playerItem: newItem)
-        player.radio
-            .rx_observe(AnyObject.self, "timedMetadata", options: [.Initial, .New], retainSelf: false)
-            .subscribeNext { (object) in
-            
-            let data: AVPlayerItem = object as! AVPlayerItem
-            for item in data.timedMetadata! as [AVMetadataItem] {
-                print(item.value)
-            }
-            
-        }.dispose()
+        
+    }
+    
+    func currentlyPlaying() -> Observable<Track> {
+        return player.radio.currentItem!
+            .rx_observe([AVMetadataItem].self, "timedMetadata")
+            .map { $0 ?? [] }
+            .map { $0.first ?? AVMetadataItem() }
+            .map { $0.value as? String ?? "" }
+            .map({ metaData in
+                guard metaData.isEmpty == false else {
+                    return Track(artist: "", title: "")
+                }
+                var stringParts = [String]()
+                stringParts = metaData.componentsSeparatedByString(" - ")
+                let newTrack = Track(artist: stringParts[0], title: stringParts[1])
+                return newTrack
+            })
     }
     
     func play() {

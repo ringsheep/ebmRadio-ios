@@ -18,6 +18,7 @@
 		992E2C921D5B7E6D00681FCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 992E2C901D5B7E6D00681FCE /* LaunchScreen.storyboard */; };
 		992E2C9D1D5B7E6D00681FCE /* ebmRadio_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992E2C9C1D5B7E6D00681FCE /* ebmRadio_iosTests.swift */; };
 		992E2CA81D5B7E6E00681FCE /* ebmRadio_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992E2CA71D5B7E6E00681FCE /* ebmRadio_iosUITests.swift */; };
+		99760EC61D6903EB005D4C1B /* WaveformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99760EC51D6903EB005D4C1B /* WaveformView.swift */; };
 		9987C6E91D5E35C300E3FD25 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9987C6E81D5E35C300E3FD25 /* AVFoundation.framework */; };
 		99B651791D67545D00F353C5 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B651781D67545D00F353C5 /* Player.swift */; };
 		99B6517B1D67550800F353C5 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B6517A1D67550800F353C5 /* Track.swift */; };
@@ -64,6 +65,7 @@
 		992E2CA71D5B7E6E00681FCE /* ebmRadio_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ebmRadio_iosUITests.swift; sourceTree = "<group>"; };
 		992E2CA91D5B7E6E00681FCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9971AA9035BB4B44F6294914 /* Pods_ebmRadio_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ebmRadio_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		99760EC51D6903EB005D4C1B /* WaveformView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveformView.swift; sourceTree = "<group>"; };
 		9987C6E81D5E35C300E3FD25 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		99B651781D67545D00F353C5 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		99B6517A1D67550800F353C5 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 		992E2C861D5B7E6D00681FCE /* ebmRadio-ios */ = {
 			isa = PBXGroup;
 			children = (
+				99760EC41D6903C2005D4C1B /* Views */,
 				99B651771D67545200F353C5 /* Model */,
 				992E2CB51D5B7F5A00681FCE /* Services */,
 				992E2C871D5B7E6D00681FCE /* AppDelegate.swift */,
@@ -181,6 +184,14 @@
 				991BE6011D5B81D600901903 /* StreamingServiceImpl.swift */,
 			);
 			name = Services;
+			sourceTree = "<group>";
+		};
+		99760EC41D6903C2005D4C1B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				99760EC51D6903EB005D4C1B /* WaveformView.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		99B651771D67545200F353C5 /* Model */ = {
@@ -470,6 +481,7 @@
 			files = (
 				992E2C8A1D5B7E6D00681FCE /* PlayerViewController.swift in Sources */,
 				991BE6001D5B81AF00901903 /* StreamingService.swift in Sources */,
+				99760EC61D6903EB005D4C1B /* WaveformView.swift in Sources */,
 				991BE6021D5B81D600901903 /* StreamingServiceImpl.swift in Sources */,
 				99B651791D67545D00F353C5 /* Player.swift in Sources */,
 				992E2C881D5B7E6D00681FCE /* AppDelegate.swift in Sources */,
