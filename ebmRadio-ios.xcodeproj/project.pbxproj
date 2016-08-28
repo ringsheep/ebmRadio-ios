@@ -11,9 +11,6 @@
 		7517C76EF41511C9D5320AA2 /* Pods_ebmRadio_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC2DDB312C2CC375AC588355 /* Pods_ebmRadio_iosTests.framework */; };
 		991BE6001D5B81AF00901903 /* StreamingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991BE5FF1D5B81AF00901903 /* StreamingService.swift */; };
 		991BE6021D5B81D600901903 /* StreamingServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991BE6011D5B81D600901903 /* StreamingServiceImpl.swift */; };
-		992AE9131D71E61F00F61B4A /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 992AE9121D71E61F00F61B4A /* AudioKit.framework */; };
-		992AE9141D723EC100F61B4A /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 992AE9121D71E61F00F61B4A /* AudioKit.framework */; };
-		992AE9151D723EC100F61B4A /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 992AE9121D71E61F00F61B4A /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		992E2C881D5B7E6D00681FCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992E2C871D5B7E6D00681FCE /* AppDelegate.swift */; };
 		992E2C8A1D5B7E6D00681FCE /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992E2C891D5B7E6D00681FCE /* PlayerViewController.swift */; };
 		992E2C8D1D5B7E6D00681FCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 992E2C8B1D5B7E6D00681FCE /* Main.storyboard */; };
@@ -55,20 +52,6 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		992AE9161D723EC100F61B4A /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				992AE9151D723EC100F61B4A /* AudioKit.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		500367A593A40B35BAA4F32C /* Pods-ebmRadio-iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ebmRadio-iosUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ebmRadio-iosUITests/Pods-ebmRadio-iosUITests.release.xcconfig"; sourceTree = "<group>"; };
 		792F30BA8056B8756BC84889 /* Pods-ebmRadio-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ebmRadio-iosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ebmRadio-iosTests/Pods-ebmRadio-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -77,7 +60,6 @@
 		991BE6011D5B81D600901903 /* StreamingServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamingServiceImpl.swift; sourceTree = "<group>"; };
 		991BE6031D5B827900901903 /* ebmRadio-ios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ebmRadio-ios-Bridging-Header.h"; sourceTree = "<group>"; };
 		9923FFA31D63A2EA00F00BB2 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		992AE9121D71E61F00F61B4A /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioKit.framework; path = "ebmRadio-ios/AudioKit.framework"; sourceTree = "<group>"; };
 		992E2C841D5B7E6D00681FCE /* ebmRadio-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ebmRadio-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		992E2C871D5B7E6D00681FCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		992E2C891D5B7E6D00681FCE /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
@@ -128,10 +110,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				992AE9131D71E61F00F61B4A /* AudioKit.framework in Frameworks */,
 				99B6517D1D67590900F353C5 /* AVKit.framework in Frameworks */,
 				9987C6E91D5E35C300E3FD25 /* AVFoundation.framework in Frameworks */,
-				992AE9141D723EC100F61B4A /* AudioKit.framework in Frameworks */,
 				548F3919B4264CAAD2AF0A7D /* Pods_ebmRadio_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,7 +253,6 @@
 		9C4C9D78A45A90B442C724A8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				992AE9121D71E61F00F61B4A /* AudioKit.framework */,
 				99B6517C1D67590900F353C5 /* AVKit.framework */,
 				9923FFA31D63A2EA00F00BB2 /* MediaPlayer.framework */,
 				9987C6E81D5E35C300E3FD25 /* AVFoundation.framework */,
@@ -297,7 +276,6 @@
 				992E2C821D5B7E6D00681FCE /* Resources */,
 				D94BA0BAB4EF29633F022287 /* [CP] Embed Pods Frameworks */,
 				314790C3C073C720455ED5E8 /* [CP] Copy Pods Resources */,
-				992AE9161D723EC100F61B4A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
