@@ -12,52 +12,54 @@ import RxSwift
 
 class StreamingServiceImpl: StreamingService {
     
-    var player:Player = Player()
+    var player:STKAudioPlayer
+    let url:NSURL!
     
     init(stationURL: String) {
         
-        let newItem = AVPlayerItem(URL: NSURL(string: stationURL)!)
-        player.radio = AVPlayer(playerItem: newItem)
-        
+        player = STKAudioPlayer()
+        url = NSURL(string: stationURL)
     }
     
-    func currentlyPlaying() -> Observable<Track> {
-        return player.radio.currentItem!
-            .rx_observe([AVMetadataItem].self, "timedMetadata")
-            .map { $0 ?? [] }
-            .map { $0.first ?? AVMetadataItem() }
-            .map { $0.value as? String ?? "" }
-            .map({ metaData in
-                guard metaData.isEmpty == false else {
-                    return Track(artist: "", title: "")
-                }
-                var stringParts = [String]()
-                stringParts = metaData.componentsSeparatedByString(" - ")
-                let newTrack = Track(artist: stringParts[0], title: stringParts[1])
-                return newTrack
-            })
-    }
+//    func currentlyPlaying() -> Observable<Track> {
+//        return player.audioFile.avAsset
+//            .rx_observe([AVMetadataItem].self, "metadata")
+//            .map { $0 ?? [] }
+//            .map { $0.first ?? AVMetadataItem() }
+//            .map { $0.value as? String ?? "" }
+//            .map({ metaData in
+//                guard metaData.isEmpty == false else {
+//                    return Track(artist: "", title: "")
+//                }
+//                
+////                print(self.player.radio.currentItem?.tracks.first?.assetTrack.asset?.tracks)
+////                let ass = self.player.radio.currentItem?.tracks.first?.assetTrack.asset
+////                let read = try! AVAssetReader(asset: ass!)
+////                print(read)
+//                
+//                var stringParts = [String]()
+//                stringParts = metaData.componentsSeparatedByString(" - ")
+//                let newTrack = Track(artist: stringParts[0], title: stringParts[1])
+//                return newTrack
+//            })
+//    }
     
     func play() {
-        player.radio.play()
-        player.isPlaying = true
+        player.playURL(url)
     }
     
-    func pause() {
-        player.radio.pause()
-        player.isPlaying = false
+    func stop() {
+        player.stop()
     }
     
     func toggle() {
-        if player.isPlaying == true {
-            pause()
-        } else {
+        print(player.state)
+        switch player.state {
+        case STKAudioPlayerState.Stopped:
             play()
+        default:
+            stop()
         }
-    }
-    
-    func currentlyPlaying() -> Bool {
-        return player.isPlaying
     }
     
 }

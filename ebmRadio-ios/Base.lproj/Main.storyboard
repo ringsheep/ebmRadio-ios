@@ -19,10 +19,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RnA-aY-5OO" customClass="WaveformView" customModule="ebmRadio_ios" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="466" width="768" height="452"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nA4-eX-Aax">
                                 <rect key="frame" x="698" y="954" width="50" height="50"/>
                                 <constraints>
@@ -82,13 +78,11 @@
                             <constraint firstItem="wyh-hF-SUC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KwQ-qW-m76"/>
                             <constraint firstItem="wyh-hF-SUC" firstAttribute="top" secondItem="idr-gu-mMj" secondAttribute="bottom" constant="20" id="Ptu-RL-d8y"/>
                             <constraint firstAttribute="trailingMargin" secondItem="wyh-hF-SUC" secondAttribute="trailing" id="QrS-Mb-AHU"/>
-                            <constraint firstAttribute="trailing" secondItem="RnA-aY-5OO" secondAttribute="trailing" id="RJC-jE-BVK"/>
                             <constraint firstItem="nA4-eX-Aax" firstAttribute="centerY" secondItem="cAz-wW-7BY" secondAttribute="centerY" id="SqL-9Z-ipt"/>
                             <constraint firstItem="uov-Mk-Pnz" firstAttribute="trailing" secondItem="idr-gu-mMj" secondAttribute="trailing" id="Tgr-wj-N4q"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nA4-eX-Aax" secondAttribute="bottom" constant="20" id="Y6I-Jz-Ymq"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cAz-wW-7BY" secondAttribute="bottom" constant="40" id="Ykq-rw-nNK"/>
                             <constraint firstItem="wyh-hF-SUC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="csU-Nc-zMF"/>
-                            <constraint firstItem="RnA-aY-5OO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eBI-rq-V0F"/>
                             <constraint firstItem="DnJ-fq-8kZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fgW-Ct-NxB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="idr-gu-mMj" secondAttribute="trailing" id="gji-YM-c29"/>
                             <constraint firstItem="wyh-hF-SUC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-30" id="i9Q-pO-pvm"/>
@@ -97,10 +91,8 @@
                             <constraint firstItem="idr-gu-mMj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-60" id="qkP-nw-rw4"/>
                             <constraint firstItem="nA4-eX-Aax" firstAttribute="leading" secondItem="cAz-wW-7BY" secondAttribute="trailing" constant="20" id="qot-PX-g2R"/>
                             <constraint firstAttribute="leadingMargin" secondItem="idr-gu-mMj" secondAttribute="leading" id="vGr-Z4-tLi"/>
-                            <constraint firstItem="uov-Mk-Pnz" firstAttribute="top" secondItem="RnA-aY-5OO" secondAttribute="bottom" id="van-un-Zwd"/>
                             <constraint firstAttribute="leadingMargin" secondItem="cAz-wW-7BY" secondAttribute="leading" id="wmf-u5-qVz"/>
                             <constraint firstItem="idr-gu-mMj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="xua-ei-Iox"/>
-                            <constraint firstItem="RnA-aY-5OO" firstAttribute="top" secondItem="wyh-hF-SUC" secondAttribute="bottom" constant="-35.5" id="xvc-H5-dUx"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -124,7 +116,6 @@
                         <outlet property="trackArtistLabel" destination="idr-gu-mMj" id="ERh-0J-5kY"/>
                         <outlet property="trackSlider" destination="uov-Mk-Pnz" id="URu-QB-dMf"/>
                         <outlet property="trackTitleLabel" destination="wyh-hF-SUC" id="Js9-hF-Ii7"/>
-                        <outlet property="waveformView" destination="RnA-aY-5OO" id="XzB-q1-mHF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

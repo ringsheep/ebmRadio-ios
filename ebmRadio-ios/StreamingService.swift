@@ -10,9 +10,8 @@ import Foundation
 import RxSwift
 
 protocol StreamingService {
-    var player:Player { get set }
     func play()
-    func pause()
+    func stop()
     func toggle()
-    func currentlyPlaying() -> Observable<Track>
+//    func currentlyPlaying() -> Observable<Track>
 }
