@@ -64,34 +64,3 @@ class StreamingServiceImpl: NSObject, StreamingService {
     }
     
 }
-
-extension StreamingServiceImpl: STKAudioPlayerDelegate {
-    
-    @objc func audioPlayer(audioPlayer: STKAudioPlayer, didStartPlayingQueueItemId queueItemId: NSObject) {
-        
-    }
-    
-    @objc func audioPlayer(audioPlayer: STKAudioPlayer, didFinishBufferingSourceWithQueueItemId queueItemId: NSObject) {
-        
-    }
-    
-    @objc func audioPlayer(audioPlayer: STKAudioPlayer, stateChanged state: STKAudioPlayerState, previousState: STKAudioPlayerState) {
-        
-    }
-    
-    @objc func audioPlayer(audioPlayer: STKAudioPlayer, didFinishPlayingQueueItemId queueItemId: NSObject, withReason stopReason: STKAudioPlayerStopReason, andProgress progress: Double, andDuration duration: Double) {
-        
-    }
-    
-    @objc func audioPlayer(audioPlayer: STKAudioPlayer, unexpectedError errorCode: STKAudioPlayerErrorCode) {
-        
-    }
-    
-    @objc func audioPlayer(audioPlayer: STKAudioPlayer, logInfo line: String) {
-        print("line \(line)")
-    }
-    
-    func audioPlayer(audioPlayer: STKAudioPlayer, didUpdateMetaData metaData: [NSObject : AnyObject]) {
-        print("meta \(metaData)")
-    }
-}
