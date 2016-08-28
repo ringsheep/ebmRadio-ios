@@ -9,15 +9,15 @@
 import Foundation
 import AVFoundation
 import RxSwift
+import FreeStreamer
 
-class StreamingServiceImpl: NSObject, StreamingService {
+class StreamingServiceImpl: StreamingService {
     
-    var player:STKAudioPlayer
+    var player:FSAudioController!
     var url:NSURL!
     
     init(stationURL: String) {
-        player = STKAudioPlayer()
-        url = NSURL(string: stationURL)
+        player = FSAudioController(url: NSURL(string: stationURL))
     }
     
     
@@ -45,8 +45,7 @@ class StreamingServiceImpl: NSObject, StreamingService {
 //    }
     
     func play() {
-        player.delegate = self
-        player.playURL(url)
+        player.play()
     }
     
     func stop() {
@@ -54,12 +53,10 @@ class StreamingServiceImpl: NSObject, StreamingService {
     }
     
     func toggle() {
-        print(player.state)
-        switch player.state {
-        case STKAudioPlayerState.Stopped:
-            play()
-        default:
+        if player.isPlaying() {
             stop()
+        } else {
+            play()
         }
     }
     
