@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -20,32 +20,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nA4-eX-Aax">
-                                <rect key="frame" x="698" y="954" width="50" height="50"/>
+                                <rect key="frame" x="716" y="964" width="32" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="nA4-eX-Aax" secondAttribute="height" multiplier="1:1" id="gzj-Wp-WlY"/>
-                                    <constraint firstAttribute="width" constant="50" id="hdD-ME-V4C"/>
+                                    <constraint firstAttribute="width" secondItem="nA4-eX-Aax" secondAttribute="height" multiplier="4:5" id="1zM-K2-nbr"/>
+                                    <constraint firstAttribute="height" constant="40" id="aUM-ab-POC"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" image="Play-50">
+                                <state key="normal" image="play">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="deutsch amerikanische freundschaft" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idr-gu-mMj">
-                                <rect key="frame" x="20" y="422" width="728" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="20" y="419" width="728" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="uov-Mk-Pnz">
-                                <rect key="frame" x="18" y="918" width="732" height="31"/>
+                                <rect key="frame" x="18" y="921.5" width="732" height="31"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="minimumTrackTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="maximumTrackTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="thumbTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="320 kbps, streaming" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAz-wW-7BY">
-                                <rect key="frame" x="20" y="968" width="658" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="20" y="971.5" width="676" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -56,7 +56,7 @@
                                     <constraint firstAttribute="height" constant="50" id="uYT-DZ-q7p"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Button" image="EBM"/>
+                                <state key="normal" title="Button" image="EBM@1x"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Liebe Auf Den Ersten Blick" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wyh-hF-SUC">
                                 <rect key="frame" x="20" y="463" width="728" height="38.5"/>
@@ -64,52 +64,39 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EUA-mJ-ADW" customClass="FSFrequencyPlotView">
+                                <rect key="frame" x="0.0" y="501.5" width="768" height="420"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="DnJ-fq-8kZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="5IJ-h1-pQ6"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="cAz-wW-7BY" secondAttribute="bottom" constant="20" id="7fH-vW-3f5"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="uov-Mk-Pnz" secondAttribute="bottom" constant="250" id="8Ho-Fg-w4U"/>
                             <constraint firstItem="uov-Mk-Pnz" firstAttribute="leading" secondItem="idr-gu-mMj" secondAttribute="leading" id="BWt-kj-h2T"/>
-                            <constraint firstItem="cAz-wW-7BY" firstAttribute="top" secondItem="uov-Mk-Pnz" secondAttribute="bottom" constant="102" id="D7T-uq-6Il"/>
                             <constraint firstItem="cAz-wW-7BY" firstAttribute="top" secondItem="uov-Mk-Pnz" secondAttribute="bottom" constant="20" id="DDq-YS-T7s"/>
-                            <constraint firstItem="uov-Mk-Pnz" firstAttribute="top" secondItem="idr-gu-mMj" secondAttribute="bottom" id="DQx-Yd-Idq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nA4-eX-Aax" secondAttribute="trailing" id="FX3-GA-dIE"/>
+                            <constraint firstItem="uov-Mk-Pnz" firstAttribute="top" secondItem="EUA-mJ-ADW" secondAttribute="bottom" id="GVj-oC-KiE"/>
                             <constraint firstItem="wyh-hF-SUC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KwQ-qW-m76"/>
+                            <constraint firstItem="EUA-mJ-ADW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Lgz-9r-zxU"/>
+                            <constraint firstAttribute="trailing" secondItem="EUA-mJ-ADW" secondAttribute="trailing" id="Lid-25-aRO"/>
                             <constraint firstItem="wyh-hF-SUC" firstAttribute="top" secondItem="idr-gu-mMj" secondAttribute="bottom" constant="20" id="Ptu-RL-d8y"/>
                             <constraint firstAttribute="trailingMargin" secondItem="wyh-hF-SUC" secondAttribute="trailing" id="QrS-Mb-AHU"/>
                             <constraint firstItem="nA4-eX-Aax" firstAttribute="centerY" secondItem="cAz-wW-7BY" secondAttribute="centerY" id="SqL-9Z-ipt"/>
                             <constraint firstItem="uov-Mk-Pnz" firstAttribute="trailing" secondItem="idr-gu-mMj" secondAttribute="trailing" id="Tgr-wj-N4q"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nA4-eX-Aax" secondAttribute="bottom" constant="20" id="Y6I-Jz-Ymq"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cAz-wW-7BY" secondAttribute="bottom" constant="40" id="Ykq-rw-nNK"/>
                             <constraint firstItem="wyh-hF-SUC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="csU-Nc-zMF"/>
                             <constraint firstItem="DnJ-fq-8kZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fgW-Ct-NxB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="idr-gu-mMj" secondAttribute="trailing" id="gji-YM-c29"/>
                             <constraint firstItem="wyh-hF-SUC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-30" id="i9Q-pO-pvm"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cAz-wW-7BY" secondAttribute="bottom" constant="209.5" id="lXX-Ww-W0V"/>
-                            <constraint firstItem="idr-gu-mMj" firstAttribute="top" secondItem="DnJ-fq-8kZ" secondAttribute="bottom" constant="30" id="pNa-Nx-G0T"/>
-                            <constraint firstItem="idr-gu-mMj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-60" id="qkP-nw-rw4"/>
                             <constraint firstItem="nA4-eX-Aax" firstAttribute="leading" secondItem="cAz-wW-7BY" secondAttribute="trailing" constant="20" id="qot-PX-g2R"/>
                             <constraint firstAttribute="leadingMargin" secondItem="idr-gu-mMj" secondAttribute="leading" id="vGr-Z4-tLi"/>
                             <constraint firstAttribute="leadingMargin" secondItem="cAz-wW-7BY" secondAttribute="leading" id="wmf-u5-qVz"/>
-                            <constraint firstItem="idr-gu-mMj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="xua-ei-Iox"/>
+                            <constraint firstItem="EUA-mJ-ADW" firstAttribute="top" secondItem="wyh-hF-SUC" secondAttribute="bottom" id="zuw-90-cLS"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="pNa-Nx-G0T"/>
-                                <exclude reference="qkP-nw-rw4"/>
-                                <exclude reference="xua-ei-Iox"/>
-                                <exclude reference="DQx-Yd-Idq"/>
-                                <exclude reference="D7T-uq-6Il"/>
-                                <exclude reference="7fH-vW-3f5"/>
-                                <exclude reference="8Ho-Fg-w4U"/>
-                                <exclude reference="Ykq-rw-nNK"/>
-                                <exclude reference="lXX-Ww-W0V"/>
-                            </mask>
-                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
+                        <outlet property="frequencyPlotView" destination="EUA-mJ-ADW" id="gX5-UV-BxF"/>
                         <outlet property="logoButton" destination="DnJ-fq-8kZ" id="xQO-63-OB4"/>
                         <outlet property="playButton" destination="nA4-eX-Aax" id="rLB-Bf-1IX"/>
                         <outlet property="streamLabel" destination="cAz-wW-7BY" id="RTC-H9-5vg"/>
@@ -120,11 +107,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="279" y="348"/>
+            <point key="canvasLocation" x="317" y="274"/>
         </scene>
     </scenes>
     <resources>
-        <image name="EBM" width="155" height="161"/>
-        <image name="Play-50" width="50" height="50"/>
+        <image name="EBM@1x" width="155" height="161"/>
+        <image name="play" width="43" height="50"/>
     </resources>
 </document>

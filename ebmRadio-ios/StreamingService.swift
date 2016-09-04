@@ -7,11 +7,14 @@
 //
 
 import Foundation
+import FreeStreamer
 import RxSwift
 
 protocol StreamingService {
+    var analyser:FSFrequencyDomainAnalyzer {get set}
     func play()
-    func stop()
+    func pause()
     func toggle()
-//    func currentlyPlaying() -> Observable<Track>
+    func currentlyPlaying(trackFound : (Track -> Void))
+    func currentStatus(newStatus: (String -> Void))
 }

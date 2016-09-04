@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "pause.pdf",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Bulleted List Filled-50.png",
       "scale" : "2x"
     },
     {

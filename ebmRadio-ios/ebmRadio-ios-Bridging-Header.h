@@ -9,3 +9,5 @@
 #import <FreeStreamer/FSParsePlaylistRequest.h>
 #import <FreeStreamer/FSParseRssPodcastFeedRequest.h>
 #import <FreeStreamer/FSPlaylistItem.h>
+#import "FSFrequencyDomainAnalyzer.h"
+#import "FSFrequencyPlotView.h"
