@@ -8,6 +8,7 @@ target 'ebmRadio-ios' do
   # Pods for ebmRadio-ios
   pod 'RxSwift',    '~> 2.0'
   pod 'RxCocoa',    '~> 2.0'
+  pod 'FreeStreamer'
   
   target 'ebmRadio-iosTests' do
     inherit! :search_paths

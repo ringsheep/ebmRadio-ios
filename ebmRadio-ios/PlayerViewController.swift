@@ -17,37 +17,38 @@ class PlayerViewController: UIViewController {
     var disposeBag = DisposeBag()
     
     @IBOutlet weak var logoButton: UIButton!
-    @IBOutlet weak var trackLabel: UILabel!
+    @IBOutlet weak var trackArtistLabel: UILabel!
+    @IBOutlet weak var trackTitleLabel: UILabel!
     @IBOutlet weak var trackSlider: UISlider!
     @IBOutlet weak var streamLabel: UILabel!
     @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var frequencyPlotView: FSFrequencyPlotView!
     
     var streamingService:StreamingService!
 
+    var timer:NSTimer?
+    var change:CGFloat = 0.01
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        streamingService = StreamingServiceImpl()
+        streamingService = StreamingServiceImpl(stationURL: "http://87.106.138.241:7000/")
+        streamingService.analyser.delegate = self.frequencyPlotView
         
         setUpLogoButton()
         setUpPlayButton()
         
-        if NSClassFromString("MPNowPlayingInfoCenter") != nil {
-            //            let image:UIImage = UIImage(named: "logo_player_background")!
-            //            let albumArt = MPMediaItemArtwork(image: image)
-            let songInfo = [
-                MPMediaItemPropertyTitle: "Radio Brasov",
-                MPMediaItemPropertyArtist: "87,8fm",
-                //                MPMediaItemPropertyArtwork: albumArt
-            ]
-            MPNowPlayingInfoCenter.defaultCenter().nowPlayingInfo = songInfo
+        streamingService.currentlyPlaying { [unowned self] track in
+            self.trackArtistLabel.text = track.artist
+            self.trackTitleLabel.text = track.title
         }
-        do {
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
-            UIApplication.sharedApplication().beginReceivingRemoteControlEvents()
-            print("Receiving remote control events\n")
-        } catch {
-            print("Audio Session error.\n")
+        
+        streamingService.currentStatus { [unowned self] status in
+            self.streamLabel.text = status
         }
+    }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
     }
     
     private func setUpLogoButton() {
@@ -57,12 +58,11 @@ class PlayerViewController: UIViewController {
     }
     
     private func setUpPlayButton() {
-        let origPlayImage = UIImage(named: "Play-50");
-        let tintedPlayImage = origPlayImage?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
-        let origStopImage = UIImage(named: "Stop-50");
-        let tintedStopImage = origStopImage?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
-        playButton.setImage(tintedPlayImage, forState: UIControlState.Normal)
-        playButton.setImage(tintedStopImage, forState: UIControlState.Selected)
+        // icons created by NAS from the Noun Project
+        let playImage = UIImage(named: "play");
+        let pauseImage = UIImage(named: "pause");
+        playButton.setImage(playImage, forState: UIControlState.Normal)
+        playButton.setImage(pauseImage, forState: UIControlState.Selected)
         playButton.rx_tap
             .subscribeNext { [unowned self] x in
                 self.streamingService.toggle()
