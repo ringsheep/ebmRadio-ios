@@ -24,7 +24,7 @@
 		99B6517B1D67550800F353C5 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B6517A1D67550800F353C5 /* Track.swift */; };
 		99B6517D1D67590900F353C5 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99B6517C1D67590900F353C5 /* AVKit.framework */; };
 		99B9A3EA1D7C422900339E44 /* FSFrequencyDomainAnalyzer.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B9A3E71D7C422900339E44 /* FSFrequencyDomainAnalyzer.m */; };
-		99B9A3EB1D7C422900339E44 /* FSFrequencyPlotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B9A3E91D7C422900339E44 /* FSFrequencyPlotView.m */; };
+		99F4C6261D7F6C49002EABBA /* FrequencyPlotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F4C6251D7F6C49002EABBA /* FrequencyPlotView.swift */; };
 		AB5A8F5384B05157484D71DB /* Pods_ebmRadio_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9971AA9035BB4B44F6294914 /* Pods_ebmRadio_iosUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,8 +74,7 @@
 		99B6517C1D67590900F353C5 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		99B9A3E61D7C422900339E44 /* FSFrequencyDomainAnalyzer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSFrequencyDomainAnalyzer.h; sourceTree = "<group>"; };
 		99B9A3E71D7C422900339E44 /* FSFrequencyDomainAnalyzer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSFrequencyDomainAnalyzer.m; sourceTree = "<group>"; };
-		99B9A3E81D7C422900339E44 /* FSFrequencyPlotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSFrequencyPlotView.h; sourceTree = "<group>"; };
-		99B9A3E91D7C422900339E44 /* FSFrequencyPlotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSFrequencyPlotView.m; sourceTree = "<group>"; };
+		99F4C6251D7F6C49002EABBA /* FrequencyPlotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrequencyPlotView.swift; sourceTree = "<group>"; };
 		BC2DDB312C2CC375AC588355 /* Pods_ebmRadio_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ebmRadio_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBE0A9ADF59CAB968379ABE8 /* Pods-ebmRadio-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ebmRadio-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-ebmRadio-ios/Pods-ebmRadio-ios.release.xcconfig"; sourceTree = "<group>"; };
 		D286F3739A08311DF01E0A71 /* Pods-ebmRadio-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ebmRadio-iosUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ebmRadio-iosUITests/Pods-ebmRadio-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -207,8 +206,7 @@
 			children = (
 				99B9A3E61D7C422900339E44 /* FSFrequencyDomainAnalyzer.h */,
 				99B9A3E71D7C422900339E44 /* FSFrequencyDomainAnalyzer.m */,
-				99B9A3E81D7C422900339E44 /* FSFrequencyPlotView.h */,
-				99B9A3E91D7C422900339E44 /* FSFrequencyPlotView.m */,
+				99F4C6251D7F6C49002EABBA /* FrequencyPlotView.swift */,
 			);
 			name = "Sound Visualisation";
 			sourceTree = "<group>";
@@ -490,9 +488,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				992E2C8A1D5B7E6D00681FCE /* PlayerViewController.swift in Sources */,
-				99B9A3EB1D7C422900339E44 /* FSFrequencyPlotView.m in Sources */,
 				991BE6001D5B81AF00901903 /* StreamingService.swift in Sources */,
 				99760ECC1D6A2C0F005D4C1B /* ampl.swift in Sources */,
+				99F4C6261D7F6C49002EABBA /* FrequencyPlotView.swift in Sources */,
 				991BE6021D5B81D600901903 /* StreamingServiceImpl.swift in Sources */,
 				99B651791D67545D00F353C5 /* Player.swift in Sources */,
 				992E2C881D5B7E6D00681FCE /* AppDelegate.swift in Sources */,

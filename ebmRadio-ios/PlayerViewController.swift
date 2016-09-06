@@ -22,7 +22,7 @@ class PlayerViewController: UIViewController {
     @IBOutlet weak var trackSlider: UISlider!
     @IBOutlet weak var streamLabel: UILabel!
     @IBOutlet weak var playButton: UIButton!
-    @IBOutlet weak var frequencyPlotView: FSFrequencyPlotView!
+    @IBOutlet weak var frequencyPlotView: FrequencyPlotView!
     
     var streamingService:StreamingService!
 
@@ -37,6 +37,14 @@ class PlayerViewController: UIViewController {
         setUpLogoButton()
         setUpPlayButton()
         
+        trackSlider.rx_value
+            .subscribeNext { [unowned self] (value) in
+            self.streamingService.changeVolume(withValue: value)
+        }
+            .addDisposableTo(disposeBag)
+        
+        self.trackArtistLabel.text = ""
+        self.trackTitleLabel.text = ""
         streamingService.currentlyPlaying { [unowned self] track in
             self.trackArtistLabel.text = track.artist
             self.trackTitleLabel.text = track.title

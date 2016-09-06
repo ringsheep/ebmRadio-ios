@@ -132,4 +132,8 @@ class StreamingServiceImpl: StreamingService {
         }
     }
     
+    func changeVolume(withValue value: Float) {
+        self.player.volume = value
+    }
+    
 }

@@ -17,4 +17,5 @@ protocol StreamingService {
     func toggle()
     func currentlyPlaying(trackFound : (Track -> Void))
     func currentStatus(newStatus: (String -> Void))
+    func changeVolume(withValue value: Float)
 }
