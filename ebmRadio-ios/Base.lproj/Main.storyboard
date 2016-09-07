@@ -56,7 +56,7 @@
                                     <constraint firstAttribute="height" constant="50" id="uYT-DZ-q7p"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Button" image="EBM@1x"/>
+                                <state key="normal" title="Button" image="DB462FF9-E7BC-45D8-AF5F-9C5F8CE1C4A6"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Liebe Auf Den Ersten Blick" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wyh-hF-SUC">
                                 <rect key="frame" x="20" y="463" width="728" height="38.5"/>
@@ -65,7 +65,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EUA-mJ-ADW" customClass="FrequencyPlotView" customModule="ebmRadio_ios" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="501.5" width="768" height="420"/>
+                                <rect key="frame" x="0.0" y="501.5" width="768" height="400"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -75,7 +75,7 @@
                             <constraint firstItem="uov-Mk-Pnz" firstAttribute="leading" secondItem="idr-gu-mMj" secondAttribute="leading" id="BWt-kj-h2T"/>
                             <constraint firstItem="cAz-wW-7BY" firstAttribute="top" secondItem="uov-Mk-Pnz" secondAttribute="bottom" constant="20" id="DDq-YS-T7s"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nA4-eX-Aax" secondAttribute="trailing" id="FX3-GA-dIE"/>
-                            <constraint firstItem="uov-Mk-Pnz" firstAttribute="top" secondItem="EUA-mJ-ADW" secondAttribute="bottom" id="GVj-oC-KiE"/>
+                            <constraint firstItem="uov-Mk-Pnz" firstAttribute="top" secondItem="EUA-mJ-ADW" secondAttribute="bottom" constant="20" id="GVj-oC-KiE"/>
                             <constraint firstItem="wyh-hF-SUC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KwQ-qW-m76"/>
                             <constraint firstItem="EUA-mJ-ADW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Lgz-9r-zxU"/>
                             <constraint firstAttribute="trailing" secondItem="EUA-mJ-ADW" secondAttribute="trailing" id="Lid-25-aRO"/>
@@ -111,7 +111,22 @@
         </scene>
     </scenes>
     <resources>
-        <image name="EBM@1x" width="155" height="161"/>
+        <image name="DB462FF9-E7BC-45D8-AF5F-9C5F8CE1C4A6" width="155" height="161">
+            <mutableData key="keyedArchiveRepresentation">
+YnBsaXN0MDDUAQIDBAUGOzxYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBMU
+GR4fJSYsLzU4VSRudWxs1QkKCwwNDg8QERJWTlNTaXplViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBz
+V05TQ29sb3KAAoAMEiTAAACAA4AKWnsxNTUsIDE2MX3SFQoWGFpOUy5vYmplY3RzoReABIAJ0hUKGhii
+GxyABYAGgAkQBdMgCiEiIyRXTlMuYmFzZVtOUy5yZWxhdGl2ZYAAgAiAB18QfGZpbGU6Ly8vQXBwbGlj
+YXRpb25zL1hjb2RlLmFwcC9Db250ZW50cy9QbHVnSW5zL0lERUludGVyZmFjZUJ1aWxkZXJLaXQuaWRl
+cGx1Z2luL0NvbnRlbnRzL1Jlc291cmNlcy9JQk1pc3NpbmdJbWFnZUdseXBoLnRpZmbSJygpKlokY2xh
+c3NuYW1lWCRjbGFzc2VzVU5TVVJMoikrWE5TT2JqZWN00icoLS5XTlNBcnJheaItK9MwMQoyMzRXTlNX
+aGl0ZVxOU0NvbG9yU3BhY2VEMCAwABADgAvSJyg2N1dOU0NvbG9yojYr0icoOTpXTlNJbWFnZaI5K18Q
+D05TS2V5ZWRBcmNoaXZlctE9PlRyb290gAEACAARABoAIwAtADIANwBFAEsAVgBdAGQAcQB4AIAAggCE
+AIkAiwCNAJgAnQCoAKoArACuALMAtgC4ALoAvAC+AMUAzQDZANsA3QDfAV4BYwFuAXcBfQGAAYkBjgGW
+AZkBoAGoAbUBugG8Ab4BwwHLAc4B0wHbAd4B8AHzAfgAAAAAAAACAQAAAAAAAAA/AAAAAAAAAAAAAAAA
+AAAB+g
+</mutableData>
+        </image>
         <image name="play" width="43" height="50"/>
     </resources>
 </document>

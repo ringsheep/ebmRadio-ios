@@ -21,8 +21,17 @@ class StreamingServiceImpl: StreamingService {
     
     init(stationURL: String) {
         player = FSAudioController(url: NSURL(string: stationURL))
+        self.url = NSURL(string: stationURL)
         analyser = FSFrequencyDomainAnalyzer()
         analyser.enabled = true
+        
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            UIApplication.sharedApplication().beginReceivingRemoteControlEvents()
+            print("Receiving remote control events\n")
+        } catch {
+            print("Audio Session error.\n")
+        }
     }
     
     func currentlyPlaying(trackFound : (Track -> Void)) {
@@ -108,27 +117,11 @@ class StreamingServiceImpl: StreamingService {
         return streamTrack ?? Track(artist: "", title: "")
     }
     
-    func play() {
-        player.play()
-        do {
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
-            UIApplication.sharedApplication().beginReceivingRemoteControlEvents()
-            print("Receiving remote control events\n")
-        } catch {
-            print("Audio Session error.\n")
-        }
-    }
-    
-    func pause() {
-        player.pause()
-    }
-    
     func toggle() {
-        if launched {
-            pause()
+        if player.isPlaying() {
+            player.stop()
         } else {
-            play()
-            launched = true
+            player.play()
         }
     }
     
