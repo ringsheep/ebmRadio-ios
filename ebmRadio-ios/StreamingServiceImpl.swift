@@ -40,54 +40,17 @@ class StreamingServiceImpl: StreamingService {
         }
     }
     
-    func currentStatus(newStatus: (String -> Void)) {
-        self.player.onStateChange = { [unowned self] status in
-            var bitrate:Float?
-            if status == .FsAudioStreamPlaying {
-                self.player.activeStream.delegate = self.analyser
-                bitrate = self.player.activeStream.bitRate
+    func currentState() -> Observable<FSAudioStreamState> {
+        return Observable<FSAudioStreamState>.create { [unowned self] observer in
+            self.player.onStateChange = { newState in
+                observer.onNext(newState)
             }
-            let statusString = self.convertStatusDataToStirng(bitrate, status: status)
-            newStatus(statusString)
+            return NopDisposable.instance
         }
     }
     
-    func convertStatusDataToStirng(bitrate:Float?, status: FSAudioStreamState) -> String {
-        var newString = ""
-        if bitrate != nil {
-            newString += "\(round(bitrate!/1000)) kbps, "
-        }
-        switch status {
-        case .FsAudioStreamBuffering:
-            newString += "buffering"
-        case .FsAudioStreamPaused:
-            newString += "paused"
-        case .FsAudioStreamFailed:
-            newString += "failed"
-        case .FsAudioStreamPlaying:
-            newString += "playing"
-        case .FsAudioStreamStopped:
-            newString += "stopped"
-        case .FsAudioStreamRetrievingURL:
-            newString += "retrieving URL"
-        case .FSAudioStreamEndOfFile, .FsAudioStreamPlaybackCompleted:
-            newString += "end of stream"
-        case .FsAudioStreamSeeking:
-            newString += "seeking"
-        case .FsAudioStreamRetryingStarted:
-            newString += "retrying started"
-        case .FsAudioStreamRetryingFailed:
-            newString += "retrying failed"
-        case .FsAudioStreamRetryingSucceeded:
-            newString += "retrying succeeded"
-        case .FsAudioStreamUnknownState:
-            newString += "wtf?!"
-        }
-        return newString
-    }
-    
-    func currentBitrate() {
-        self.player.activeStream.rx_observe(Float.self, "bitRate")
+    func currentBitrate() -> Observable<Float?> {
+        return Observable.just(self.player.activeStream.bitRate)
     }
     
     func doOnMetadata( metaData:[NSObject : AnyObject]? ) -> Track {
@@ -112,7 +75,9 @@ class StreamingServiceImpl: StreamingService {
         else if songInfo[MPMediaItemPropertyTitle] != nil {
             var stringParts = [String]()
             stringParts = songInfo[MPMediaItemPropertyTitle]!.componentsSeparatedByString(" - ")
-            streamTrack = Track(artist: stringParts[0], title: stringParts[1])
+            if stringParts.count > 0 {
+                streamTrack = Track(artist: stringParts[0], title: stringParts[1])
+            }
         }
         return streamTrack ?? Track(artist: "", title: "")
     }
