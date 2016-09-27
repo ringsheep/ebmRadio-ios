@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		548F3919B4264CAAD2AF0A7D /* Pods_ebmRadio_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E366C6658932D2CE87CD1815 /* Pods_ebmRadio_ios.framework */; };
 		7517C76EF41511C9D5320AA2 /* Pods_ebmRadio_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC2DDB312C2CC375AC588355 /* Pods_ebmRadio_iosTests.framework */; };
+		991692591D9AF2B2008D2FC7 /* FSAudioStreamState+ebmRadio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991692581D9AF2B2008D2FC7 /* FSAudioStreamState+ebmRadio.swift */; };
 		991BE6001D5B81AF00901903 /* StreamingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991BE5FF1D5B81AF00901903 /* StreamingService.swift */; };
 		991BE6021D5B81D600901903 /* StreamingServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991BE6011D5B81D600901903 /* StreamingServiceImpl.swift */; };
 		992E2C881D5B7E6D00681FCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992E2C871D5B7E6D00681FCE /* AppDelegate.swift */; };
@@ -49,6 +50,7 @@
 		500367A593A40B35BAA4F32C /* Pods-ebmRadio-iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ebmRadio-iosUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ebmRadio-iosUITests/Pods-ebmRadio-iosUITests.release.xcconfig"; sourceTree = "<group>"; };
 		792F30BA8056B8756BC84889 /* Pods-ebmRadio-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ebmRadio-iosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ebmRadio-iosTests/Pods-ebmRadio-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		88957CF189F466B10318DE2C /* Pods-ebmRadio-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ebmRadio-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ebmRadio-ios/Pods-ebmRadio-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		991692581D9AF2B2008D2FC7 /* FSAudioStreamState+ebmRadio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FSAudioStreamState+ebmRadio.swift"; sourceTree = "<group>"; };
 		991BE5FF1D5B81AF00901903 /* StreamingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamingService.swift; sourceTree = "<group>"; };
 		991BE6011D5B81D600901903 /* StreamingServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamingServiceImpl.swift; sourceTree = "<group>"; };
 		991BE6031D5B827900901903 /* ebmRadio-ios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ebmRadio-ios-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				992E2C901D5B7E6D00681FCE /* LaunchScreen.storyboard */,
 				992E2C931D5B7E6D00681FCE /* Info.plist */,
 				991BE6031D5B827900901903 /* ebmRadio-ios-Bridging-Header.h */,
+				991692581D9AF2B2008D2FC7 /* FSAudioStreamState+ebmRadio.swift */,
 			);
 			path = "ebmRadio-ios";
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				992E2CA01D5B7E6E00681FCE /* Frameworks */,
 				992E2CA11D5B7E6E00681FCE /* Resources */,
 				6AB529480CC0FC2FFB370D2D /* [CP] Copy Pods Resources */,
+				B3E30D1E7647EF1EB6F2F265 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -372,7 +376,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		265E5B5C39A6D25D8AE96B78 /* [CP] Copy Pods Resources */ = {
@@ -432,7 +436,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B3E30D1E7647EF1EB6F2F265 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ebmRadio-iosUITests/Pods-ebmRadio-iosUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BE74BAC333A739232E717CA8 /* [CP] Embed Pods Frameworks */ = {
@@ -462,7 +481,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		D94BA0BAB4EF29633F022287 /* [CP] Embed Pods Frameworks */ = {
@@ -495,6 +514,7 @@
 				99B651791D67545D00F353C5 /* Player.swift in Sources */,
 				992E2C881D5B7E6D00681FCE /* AppDelegate.swift in Sources */,
 				99B6517B1D67550800F353C5 /* Track.swift in Sources */,
+				991692591D9AF2B2008D2FC7 /* FSAudioStreamState+ebmRadio.swift in Sources */,
 				99B9A3EA1D7C422900339E44 /* FSFrequencyDomainAnalyzer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

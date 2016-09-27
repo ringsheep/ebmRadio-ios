@@ -43,14 +43,13 @@ class StreamingServiceImpl: StreamingService {
     func currentState() -> Observable<FSAudioStreamState> {
         return Observable<FSAudioStreamState>.create { [unowned self] observer in
             self.player.onStateChange = { newState in
+                if newState == .FsAudioStreamPlaying && self.player.activeStream.delegate == nil {
+                    self.player.activeStream.delegate = self.analyser
+                }
                 observer.onNext(newState)
             }
             return NopDisposable.instance
         }
-    }
-    
-    func currentBitrate() -> Observable<Float?> {
-        return Observable.just(self.player.activeStream.bitRate)
     }
     
     func doOnMetadata( metaData:[NSObject : AnyObject]? ) -> Track {
@@ -88,10 +87,6 @@ class StreamingServiceImpl: StreamingService {
         } else {
             player.play()
         }
-    }
-    
-    func changeVolume(withValue value: Float) {
-        self.player.volume = value
     }
     
 }

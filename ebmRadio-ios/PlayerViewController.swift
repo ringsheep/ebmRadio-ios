@@ -22,10 +22,11 @@ class PlayerViewController: UIViewController {
     @IBOutlet weak var logoButton: UIButton!
     @IBOutlet weak var trackArtistLabel: UILabel!
     @IBOutlet weak var trackTitleLabel: UILabel!
-    @IBOutlet weak var trackSlider: UISlider!
+    @IBOutlet weak var volumeSlider: MPVolumeView!
     @IBOutlet weak var streamLabel: UILabel!
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var frequencyPlotView: FrequencyPlotView!
+    @IBOutlet weak var logoButtonTopSpace: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,14 +36,14 @@ class PlayerViewController: UIViewController {
         setUpLogoButton()
         setUpPlayButton()
         
-        trackSlider.rx_value
-            .subscribeNext { [unowned self] (value) in
-            self.streamingService.changeVolume(withValue: value)
-        }
-            .addDisposableTo(disposeBag)
+        volumeSlider.backgroundColor = UIColor.clearColor()
+        volumeSlider.showsVolumeSlider = true
+        volumeSlider.showsRouteButton = false
+        volumeSlider.tintColor = UIColor.whiteColor()
         
         self.trackArtistLabel.text = ""
         self.trackTitleLabel.text = ""
+        self.logoButtonTopSpace.constant = self.view.frame.height/2 - 100
         streamingService.currentlyPlaying { [unowned self] track in
             self.trackArtistLabel.text = track.artist
             self.trackTitleLabel.text = track.title
@@ -51,17 +52,41 @@ class PlayerViewController: UIViewController {
         let currentState = streamingService.currentState().shareReplay(1)
         
         // setting up the stream status label
-        Observable.combineLatest(currentState, streamingService.currentBitrate())
-            { self.convertStatusDataToStirng($0, bitrate: $1) }
+        currentState
+            .map{ $0.stringMessage() }
             .bindTo(self.streamLabel.rx_text)
             .addDisposableTo(disposeBag)
         
         // using the player activity state
-        self.isActive = currentState.map{ $0 == .FsAudioStreamPlaying }.shareReplay(1)
+        self.isActive = currentState.map{ $0 == .FsAudioStreamPlaying || $0 == .FsAudioStreamBuffering }.doOnNext({ [unowned self] isActive in
+            if isActive {
+                self.logoButtonTopSpace.constant = 20
+                self.frequencyPlotView.alpha = 1.0
+                self.trackArtistLabel.alpha = 1.0
+                self.trackTitleLabel.alpha = 1.0
+            } else {
+                self.logoButtonTopSpace.constant = self.view.frame.height/2 - 100
+                self.frequencyPlotView.alpha = 0.0
+                self.trackArtistLabel.alpha = 0.0
+                self.trackTitleLabel.alpha = 0.0
+            }
+            UIView.animateWithDuration(0.5) {
+                self.view.layoutIfNeeded()
+            }
+        }).shareReplay(1)
         
-        self.isActive
+        currentState
+            .map({ status in
+                switch status {
+                case .FsAudioStreamFailed, .FsAudioStreamPaused, .FsAudioStreamPlaybackCompleted, .FSAudioStreamEndOfFile, .FsAudioStreamRetryingFailed, .FsAudioStreamStopped, .FsAudioStreamUnknownState:
+                    return false
+                default:
+                    return true
+                }
+            })
             .bindTo(self.playButton.rx_selected)
             .addDisposableTo(self.disposeBag)
+        
         self.isActive
             .map{ !$0 }
             .bindTo(self.trackArtistLabel.rx_hidden)
@@ -70,7 +95,7 @@ class PlayerViewController: UIViewController {
             .map{ !$0 }
             .bindTo(self.trackTitleLabel.rx_hidden)
             .addDisposableTo(self.disposeBag)
-
+        
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
@@ -92,44 +117,9 @@ class PlayerViewController: UIViewController {
         playButton.rx_tap
             .subscribeNext { [unowned self] x in
                 self.streamingService.toggle()
-//                self.playButton.selected = !self.playButton.selected
             }
             .addDisposableTo(disposeBag)
     }
     
-    func convertStatusDataToStirng(status: FSAudioStreamState, bitrate:Float?) -> String {
-        var newString = ""
-        if bitrate != nil {
-            newString += "\(round(bitrate!/1000)) kbps, "
-        }
-        switch status {
-        case .FsAudioStreamBuffering:
-            newString += "buffering"
-        case .FsAudioStreamPaused:
-            newString += "paused"
-        case .FsAudioStreamFailed:
-            newString += "failed"
-        case .FsAudioStreamPlaying:
-            newString += "playing"
-        case .FsAudioStreamStopped:
-            newString += "stopped"
-        case .FsAudioStreamRetrievingURL:
-            newString += "retrieving URL"
-        case .FSAudioStreamEndOfFile, .FsAudioStreamPlaybackCompleted:
-            newString += "end of stream"
-        case .FsAudioStreamSeeking:
-            newString += "seeking"
-        case .FsAudioStreamRetryingStarted:
-            newString += "retrying started"
-        case .FsAudioStreamRetryingFailed:
-            newString += "retrying failed"
-        case .FsAudioStreamRetryingSucceeded:
-            newString += "retrying succeeded"
-        case .FsAudioStreamUnknownState:
-            newString += "wtf?!"
-        }
-        return newString
-    }
-
 }
 

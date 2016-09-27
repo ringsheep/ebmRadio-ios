@@ -1,22 +1,22 @@
 PODS:
-  - FreeStreamer (3.5.8):
+  - FreeStreamer (3.6.3):
     - Reachability (~> 3.0)
   - Reachability (3.2)
-  - RxCocoa (2.5.0):
+  - RxCocoa (2.6.0):
     - RxSwift (~> 2.5)
-  - RxSwift (2.5.0)
+  - RxSwift (2.6.0)
 
 DEPENDENCIES:
   - FreeStreamer
-  - RxCocoa (~> 2.0)
-  - RxSwift (~> 2.0)
+  - RxCocoa
+  - RxSwift
 
 SPEC CHECKSUMS:
-  FreeStreamer: 61471ef4a1934c67de7ec152adb91ca8fff8318f
+  FreeStreamer: cc73d77f3adc114899c82b0d0a0dc16e077ec65d
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
-  RxCocoa: e1b1562e57a554d0fb2aabf9d71b637f177257c7
-  RxSwift: 402b41a50e922a0368fc14cb3bc9f4427920e8ae
+  RxCocoa: 89ab00d5753502520227940e3a0e0a0413683c6b
+  RxSwift: 77f3a0b15324baa7a1c9bfa9f199648a82424e26
 
-PODFILE CHECKSUM: e53b3db2db82962b4a39bdcc334ee1bddf8187fb
+PODFILE CHECKSUM: 1027fb57ef06e9ddfe6104524e1b9d0b998c18bb
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.1.0.rc.2

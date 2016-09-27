@@ -15,6 +15,4 @@ protocol StreamingService {
     func toggle()
     func currentlyPlaying(trackFound : (Track -> Void))
     func currentState() -> Observable<FSAudioStreamState>
-    func currentBitrate() -> Observable<Float?>
-    func changeVolume(withValue value: Float)
 }

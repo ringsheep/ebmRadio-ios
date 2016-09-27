@@ -65,17 +65,17 @@ class FrequencyPlotView: UIView, FSFrequencyDomainAnalyzerDelegate {
         let levelWidth = CGRectGetWidth(self.bounds) / CGFloat(self.count)
         
         let context = UIGraphicsGetCurrentContext()
-        CGContextSetLineWidth(context, 1)
-        CGContextSetStrokeColorWithColor(context, UIColor.grayColor().CGColor)
+        CGContextSetLineWidth(context!, 2)
+        CGContextSetStrokeColorWithColor(context!, UIColor.lightGrayColor().CGColor)
         let yp = height - (CGFloat(self.levels[0]) * height)
-        CGContextMoveToPoint(context, 0, yp)
+        CGContextMoveToPoint(context!, 0, yp)
         
         for index in 1...self.count {
             let x = levelWidth * CGFloat(index)
-            let y = height - (CGFloat(self.levels[index]) * height)
-            CGContextAddLineToPoint(context, x, y)
+            var y = height - (CGFloat(self.levels[index]) * height)
+            CGContextAddLineToPoint(context!, x, y)
         }
-        CGContextStrokePath(context)
+        CGContextStrokePath(context!)
         drawing = false
     }
 }
