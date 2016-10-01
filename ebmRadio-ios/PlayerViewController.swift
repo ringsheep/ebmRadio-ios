@@ -35,67 +35,17 @@ class PlayerViewController: UIViewController {
         
         setUpLogoButton()
         setUpPlayButton()
-        
-        volumeSlider.backgroundColor = UIColor.clearColor()
-        volumeSlider.showsVolumeSlider = true
-        volumeSlider.showsRouteButton = false
-        volumeSlider.tintColor = UIColor.whiteColor()
+        setUpVolumeSlider()
         
         self.trackArtistLabel.text = ""
         self.trackTitleLabel.text = ""
-        self.logoButtonTopSpace.constant = self.view.frame.height/2 - 100
+        self.logoButtonTopSpace.constant = self.view.frame.height/2 - 46
         streamingService.currentlyPlaying { [unowned self] track in
             self.trackArtistLabel.text = track.artist
             self.trackTitleLabel.text = track.title
         }
         
-        let currentState = streamingService.currentState().shareReplay(1)
-        
-        // setting up the stream status label
-        currentState
-            .map{ $0.stringMessage() }
-            .bindTo(self.streamLabel.rx_text)
-            .addDisposableTo(disposeBag)
-        
-        // using the player activity state
-        self.isActive = currentState.map{ $0 == .FsAudioStreamPlaying || $0 == .FsAudioStreamBuffering }.doOnNext({ [unowned self] isActive in
-            if isActive {
-                self.logoButtonTopSpace.constant = 20
-                self.frequencyPlotView.alpha = 1.0
-                self.trackArtistLabel.alpha = 1.0
-                self.trackTitleLabel.alpha = 1.0
-            } else {
-                self.logoButtonTopSpace.constant = self.view.frame.height/2 - 100
-                self.frequencyPlotView.alpha = 0.0
-                self.trackArtistLabel.alpha = 0.0
-                self.trackTitleLabel.alpha = 0.0
-            }
-            UIView.animateWithDuration(0.5) {
-                self.view.layoutIfNeeded()
-            }
-        }).shareReplay(1)
-        
-        currentState
-            .map({ status in
-                switch status {
-                case .FsAudioStreamFailed, .FsAudioStreamPaused, .FsAudioStreamPlaybackCompleted, .FSAudioStreamEndOfFile, .FsAudioStreamRetryingFailed, .FsAudioStreamStopped, .FsAudioStreamUnknownState:
-                    return false
-                default:
-                    return true
-                }
-            })
-            .bindTo(self.playButton.rx_selected)
-            .addDisposableTo(self.disposeBag)
-        
-        self.isActive
-            .map{ !$0 }
-            .bindTo(self.trackArtistLabel.rx_hidden)
-            .addDisposableTo(self.disposeBag)
-        self.isActive
-            .map{ !$0 }
-            .bindTo(self.trackTitleLabel.rx_hidden)
-            .addDisposableTo(self.disposeBag)
-        
+        subscribeOnPlayerState()
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
@@ -121,5 +71,63 @@ class PlayerViewController: UIViewController {
             .addDisposableTo(disposeBag)
     }
     
+    private func setUpVolumeSlider() {
+        volumeSlider.backgroundColor = UIColor.clearColor()
+        volumeSlider.showsVolumeSlider = true
+        volumeSlider.showsRouteButton = false
+        volumeSlider.tintColor = UIColor.whiteColor()
+    }
+    
+    private func subscribeOnPlayerState() {
+        let currentState = streamingService.currentState().shareReplay(1)
+        
+        // setting up the stream status label
+        currentState
+            .map{ $0.stringMessage() }
+            .bindTo(self.streamLabel.rx_text)
+            .addDisposableTo(disposeBag)
+        
+        // using the player activity state
+        currentState
+            .filter({ state -> Bool in
+                switch state {
+                case .FsAudioStreamBuffering, .FsAudioStreamRetrievingURL, .FsAudioStreamSeeking, .FsAudioStreamStopped, .FsAudioStreamFailed:
+                    return true
+                default:
+                    return false
+                }
+            })
+            .map({ state -> Bool in
+                switch state {
+                case .FsAudioStreamBuffering, .FsAudioStreamRetrievingURL, .FsAudioStreamSeeking:
+                    return true
+                case .FsAudioStreamStopped, .FsAudioStreamFailed:
+                    return false
+                default:
+                    return false
+                }
+            })
+            .subscribeNext({ [unowned self] active in
+                if active {
+                    self.playButton.selected = true
+                    self.logoButtonTopSpace.constant = 20
+                    UIView.animateWithDuration(0.5) {
+                        self.frequencyPlotView.alpha = 1.0
+                        self.trackArtistLabel.alpha = 1.0
+                        self.trackTitleLabel.alpha = 1.0
+                        self.view.layoutIfNeeded()
+                    }
+                } else {
+                    self.playButton.selected = false
+                    self.logoButtonTopSpace.constant = self.view.frame.height/2 - 46
+                    UIView.animateWithDuration(0.5) {
+                        self.frequencyPlotView.alpha = 0.0
+                        self.trackArtistLabel.alpha = 0.0
+                        self.trackTitleLabel.alpha = 0.0
+                        self.view.layoutIfNeeded()
+                    }
+                }
+                }).addDisposableTo(disposeBag)
+    }
 }
 

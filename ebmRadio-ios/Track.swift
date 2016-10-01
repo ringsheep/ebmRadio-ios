@@ -8,13 +8,17 @@
 
 import Foundation
 import UIKit
+import MediaPlayer
 
 class Track {
     var title: String = ""
     var artist: String = ""
-    var artworkURL: String = ""
-    var artworkImage = UIImage()
-    var artworkLoaded = false
+    var artworkURL: String = "cover.png"
+    var info:[String:String] {
+        return [MPMediaItemPropertyTitle : self.title,
+                MPMediaItemPropertyArtist : self.artist,
+                MPMediaItemPropertyArtwork : self.artworkURL]
+    }
     
     init( artist: String, title: String ) {
         self.artist = artist

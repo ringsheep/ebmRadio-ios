@@ -28,6 +28,11 @@ class StreamingServiceImpl: StreamingService {
         do {
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
             UIApplication.sharedApplication().beginReceivingRemoteControlEvents()
+            let commandCenter = MPRemoteCommandCenter.sharedCommandCenter()
+            commandCenter.nextTrackCommand.enabled = false
+            commandCenter.previousTrackCommand.enabled = false
+            commandCenter.togglePlayPauseCommand.enabled = true
+            commandCenter.togglePlayPauseCommand.addTarget(self, action: #selector(StreamingServiceImpl.toggle))
             print("Receiving remote control events\n")
         } catch {
             print("Audio Session error.\n")
@@ -36,7 +41,9 @@ class StreamingServiceImpl: StreamingService {
     
     func currentlyPlaying(trackFound : (Track -> Void)) {
         self.player.onMetaDataAvailable = { [unowned self] metaData in
-            trackFound(self.doOnMetadata(metaData))
+            let newTrack = self.trackFromMetadata(metaData)
+            MPNowPlayingInfoCenter.defaultCenter().setValuesForKeysWithDictionary(newTrack.info)
+            trackFound(newTrack)
         }
     }
     
@@ -52,7 +59,7 @@ class StreamingServiceImpl: StreamingService {
         }
     }
     
-    func doOnMetadata( metaData:[NSObject : AnyObject]? ) -> Track {
+    func trackFromMetadata( metaData:[NSObject : AnyObject]? ) -> Track {
         guard metaData != nil else {
             return Track(artist: "", title: "")
         }
@@ -81,7 +88,7 @@ class StreamingServiceImpl: StreamingService {
         return streamTrack ?? Track(artist: "", title: "")
     }
     
-    func toggle() {
+    @objc func toggle() {
         if player.isPlaying() {
             player.stop()
         } else {
