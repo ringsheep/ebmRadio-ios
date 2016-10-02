@@ -12,7 +12,7 @@ import RxSwift
 import FreeStreamer
 import MediaPlayer
 
-class StreamingServiceImpl: StreamingService {
+class StreamingServiceImpl: NSObject, StreamingService {
     
     var player:FSAudioController
     unowned var analyser:FSFrequencyDomainAnalyzer
@@ -21,28 +21,37 @@ class StreamingServiceImpl: StreamingService {
     
     init(stationURL: String) {
         player = FSAudioController(url: NSURL(string: stationURL))
-        self.url = NSURL(string: stationURL)
+        url = NSURL(string: stationURL)
         analyser = FSFrequencyDomainAnalyzer()
         analyser.enabled = true
+        super.init()
         
+        setUpCommandCenter()
+    }
+    
+    // MARK: Private
+    
+    private func setUpCommandCenter() {
         do {
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
             UIApplication.sharedApplication().beginReceivingRemoteControlEvents()
             let commandCenter = MPRemoteCommandCenter.sharedCommandCenter()
             commandCenter.nextTrackCommand.enabled = false
             commandCenter.previousTrackCommand.enabled = false
-            commandCenter.togglePlayPauseCommand.enabled = true
-            commandCenter.togglePlayPauseCommand.addTarget(self, action: #selector(StreamingServiceImpl.toggle))
+            commandCenter.pauseCommand.addTarget(self, action: #selector(StreamingServiceImpl.toggle))
+            commandCenter.playCommand.addTarget(self, action: #selector(StreamingServiceImpl.toggle))
             print("Receiving remote control events\n")
         } catch {
             print("Audio Session error.\n")
         }
     }
     
+    // MARK: Public
+    
     func currentlyPlaying(trackFound : (Track -> Void)) {
-        self.player.onMetaDataAvailable = { [unowned self] metaData in
-            let newTrack = self.trackFromMetadata(metaData)
-            MPNowPlayingInfoCenter.defaultCenter().setValuesForKeysWithDictionary(newTrack.info)
+        self.player.onMetaDataAvailable = { metaData in
+            let newTrack = Track(metaData: metaData)
+            MPNowPlayingInfoCenter.defaultCenter().nowPlayingInfo = newTrack.info
             trackFound(newTrack)
         }
     }
@@ -59,36 +68,7 @@ class StreamingServiceImpl: StreamingService {
         }
     }
     
-    func trackFromMetadata( metaData:[NSObject : AnyObject]? ) -> Track {
-        guard metaData != nil else {
-            return Track(artist: "", title: "")
-        }
-        var songInfo = [String : String]()
-        if (metaData!["MPMediaItemPropertyTitle"] != nil) {
-            songInfo[MPMediaItemPropertyTitle] = metaData!["MPMediaItemPropertyTitle"] as? String ?? ""
-        }
-        else if (metaData!["StreamTitle"] != nil) {
-            songInfo[MPMediaItemPropertyTitle] = metaData!["StreamTitle"] as? String ?? ""
-        }
-        if (metaData!["MPMediaItemPropertyArtist"] != nil) {
-            songInfo[MPMediaItemPropertyArtist] = metaData!["MPMediaItemPropertyArtist"] as? String ?? ""
-        }
-        MPNowPlayingInfoCenter.defaultCenter().nowPlayingInfo = songInfo
-        var streamTrack:Track?
-        if songInfo[MPMediaItemPropertyArtist] != nil && songInfo[MPMediaItemPropertyTitle] != nil {
-            streamTrack = Track(artist: songInfo[MPMediaItemPropertyArtist]!, title: songInfo[MPMediaItemPropertyTitle]!)
-        }
-        else if songInfo[MPMediaItemPropertyTitle] != nil {
-            var stringParts = [String]()
-            stringParts = songInfo[MPMediaItemPropertyTitle]!.componentsSeparatedByString(" - ")
-            if stringParts.count > 0 {
-                streamTrack = Track(artist: stringParts[0], title: stringParts[1])
-            }
-        }
-        return streamTrack ?? Track(artist: "", title: "")
-    }
-    
-    @objc func toggle() {
+    func toggle() {
         if player.isPlaying() {
             player.stop()
         } else {
