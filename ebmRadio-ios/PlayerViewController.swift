@@ -126,7 +126,7 @@ class PlayerViewController: UIViewController {
                         self.trackTitleLabel.alpha = 1.0
                         self.view.layoutIfNeeded()
                     }
-                case .FsAudioStreamStopped, .FsAudioStreamRetryingFailed:
+                case .FsAudioStreamStopped, .FsAudioStreamRetryingFailed, .FsAudioStreamFailed:
                     self.isActive = false
                     self.playButton.selected = false
                     self.logoButtonTopSpace.constant = self.view.frame.height/2 - 46
@@ -136,8 +136,6 @@ class PlayerViewController: UIViewController {
                         self.trackTitleLabel.alpha = 0.0
                         self.view.layoutIfNeeded()
                     }
-                case .FsAudioStreamFailed:
-                    self.streamingService.toggle()
                 default:
                     break
                 }
