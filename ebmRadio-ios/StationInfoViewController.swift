@@ -20,8 +20,12 @@ class StationInfoViewController: UIViewController {
         self.navigationController?.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    @IBAction func stationUrlButtonPressed(sender: AnyObject) {
-        UIApplication.sharedApplication().openURL(NSURL(fileURLWithPath: station.websiteURL))
+    @IBAction func stationButtonPressed(sender: AnyObject) {
+        UIApplication.sharedApplication().openURL(NSURL(string: station.websiteURL)!)
+    }
+    
+    @IBAction func githubButtonPressed(sender: AnyObject) {
+        UIApplication.sharedApplication().openURL(NSURL(string: "https://github.com/zinyakov")!)
     }
     
     override func viewDidLoad() {
@@ -33,7 +37,14 @@ class StationInfoViewController: UIViewController {
     func setUpInfo() {
         stationNameLabel.text = station.name
         stationInfoLabel.text = station.info
-        stationUrlButton.titleLabel?.text = station.websiteURL
+        let attributes = [NSForegroundColorAttributeName : UIColor.whiteColor(),
+                          NSUnderlineStyleAttributeName: NSUnderlineStyle.StyleSingle.rawValue]
+        let attributedText = NSAttributedString(string: station.websiteURL, attributes: attributes)
+        stationUrlButton.setAttributedTitle(attributedText, forState: .Normal)
+    }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
     }
 
 }

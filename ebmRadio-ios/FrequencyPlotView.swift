@@ -53,10 +53,12 @@ class FrequencyPlotView: UIView, FSFrequencyDomainAnalyzerDelegate {
             return
         }
         
+        var lastCorrectIndex:Float = 0.5
         for index in 0...self.count {
             if (self.levels[index] < 0 || self.levels[index] > 1) {
-                print("Invalid level: \(self.levels[index])")
-                return
+                self.levels[index] = lastCorrectIndex
+            } else {
+                lastCorrectIndex = self.levels[index]
             }
         }
         
