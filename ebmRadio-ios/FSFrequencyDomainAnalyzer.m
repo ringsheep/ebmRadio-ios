@@ -28,7 +28,7 @@
  */
 
 #define kSFrequencyDomainAnalyzerSampleCount   1024
-#define kSFrequencyDomainAnalyzerLevelCount    20
+#define kSFrequencyDomainAnalyzerLevelCount    64
 
 @interface FSFrequencyDomainAnalyzer () {
 @private
