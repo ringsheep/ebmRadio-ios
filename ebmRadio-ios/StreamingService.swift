@@ -12,9 +12,7 @@ import RxSwift
 
 protocol StreamingService {
     var analyser:FSFrequencyDomainAnalyzer {get set}
-    func play()
-    func pause()
     func toggle()
     func currentlyPlaying(trackFound : (Track -> Void))
-    func currentStatus(newStatus: (String -> Void))
+    func currentState() -> Observable<FSAudioStreamState>
 }
