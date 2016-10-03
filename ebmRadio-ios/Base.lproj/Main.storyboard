@@ -150,7 +150,15 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="https://github.com/zinyakov">
+                                        <fragment content="made by: ">
+                                            <attributes>
+                                                <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <font key="NSFont" metaFont="system" size="20"/>
+                                                <string key="NSLink">https://github.com/zinyakov</string>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="github.com/zinyakov">
                                             <attributes>
                                                 <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <font key="NSFont" metaFont="system" size="20"/>

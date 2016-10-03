@@ -30,6 +30,11 @@ class StationInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBar.barStyle = .BlackTranslucent
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
+        self.navigationController?.navigationBar.backgroundColor = UIColor.blackColor()
+        self.navigationController?.navigationBar.shadowImage = UIImage()
 
         setUpInfo()
     }
@@ -39,7 +44,7 @@ class StationInfoViewController: UIViewController {
         stationInfoLabel.text = station.info
         let attributes = [NSForegroundColorAttributeName : UIColor.whiteColor(),
                           NSUnderlineStyleAttributeName: NSUnderlineStyle.StyleSingle.rawValue]
-        let attributedText = NSAttributedString(string: station.websiteURL, attributes: attributes)
+        let attributedText = NSAttributedString(string: "ebm-radio.de", attributes: attributes)
         stationUrlButton.setAttributedTitle(attributedText, forState: .Normal)
     }
     
