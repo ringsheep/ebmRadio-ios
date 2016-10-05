@@ -71,7 +71,7 @@
     {
       "size" : "40x40",
       "idiom" : "ipad",
-      "filename" : "Group@120h-8.png",
+      "filename" : "Group@40h.png",
       "scale" : "1x"
     },
     {
@@ -83,19 +83,19 @@
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "Group@180h.png",
+      "filename" : "Group@76h.png",
       "scale" : "1x"
     },
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "Group@180h-1.png",
+      "filename" : "Group@152h.png",
       "scale" : "2x"
     },
     {
       "size" : "83.5x83.5",
       "idiom" : "ipad",
-      "filename" : "Group@180h-2.png",
+      "filename" : "Group@167h.png",
       "scale" : "2x"
     }
   ],

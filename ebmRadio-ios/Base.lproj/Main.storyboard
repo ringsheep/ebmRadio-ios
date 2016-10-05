@@ -175,6 +175,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="yDO-PH-sus" firstAttribute="trailing" secondItem="e9i-Gk-N1p" secondAttribute="trailingMargin" id="012-A6-LCc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="GYp-M2-9gf" secondAttribute="trailing" id="3Q3-ku-DyE"/>
