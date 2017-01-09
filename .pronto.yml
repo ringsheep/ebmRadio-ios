@@ -1,0 +1,7 @@
+github:
+  slug: zinyakov/ebmRadio-ios
+  access_token: 815254ca612745a3f0682388bd7dd94177ed54d9
+  api_endpoint: https://api.github.com/
+  web_endpoint: https://github.com/
+max_warnings: 150
+verbose: true
