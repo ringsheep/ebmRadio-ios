@@ -1,0 +1,98 @@
+disabled_rules: # rule identifiers to exclude from running
+  # Codestyle
+  - opening_brace # disabled, too much output, try .swiftlintautocorrect.yml
+  - colon # disabled, too much output, try .swiftlintautocorrect.yml
+  # - attributes
+  # - comma
+  # - control_statement
+  # - closing_brace
+  # - closure_spacing
+  # - closure_parameter_position
+  # - closure_end_indentation
+  # - conditional_returns_on_newline
+  # - type_name
+  # - leading_whitespace
+  # - empty_parentheses_with_trailing_closure
+  # - operator_usage_whitespace
+  # - operator_whitespace
+  # - return_arrow_whitespace
+  # - statement_position
+  # - switch_case_on_newline
+  # - trailing_comma
+  # - trailing_newline
+  # - trailing_semicolon
+  - trailing_whitespace # disabled as too many useless output
+  # - variable_name
+  # - vertical_whitespace
+
+  # Code logic
+  # - cyclomatic_complexity
+  # - nesting
+  - force_cast
+  - force_try
+  - force_unwrapping
+  - explicit_init
+  - function_parameter_count
+  - implicit_getter
+  - overridden_super_call
+  - private_outlet
+  - private_unit_test
+  - weak_delegate
+
+  # Length
+  - line_length
+  # - file_length
+  #  - function_body_length
+  - type_body_length
+
+  # Other
+  - valid_docs
+  - missing_docs
+  - dynamic_inline
+  - empty_count
+  - empty_parameters
+  - mark
+  - todo
+  - legacy_cggeometry_functions
+  - legacy_constant
+  - legacy_constructor
+  - legacy_nsgeometry_functions
+  - nimble_operator
+  - redundant_nil_coalescing
+  - redundant_string_enum_value
+  - syntactic_sugar
+  - unused_closure_parameter
+  - unused_enumerated
+  - valid_ibinspectable
+  - void_return
+
+  # - custom_rules
+
+included:
+  - ebmRadio-ios/
+
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Carthage
+  - Pods
+
+function_body_length:
+  warning: 60
+  error: 120
+file_length:
+  warning: 500
+  error: 1200
+
+custom_rules:
+  non-localized_cyrillic_strings:
+    included: ".*.swift"
+    name: "Non-localized cyrillic strings"
+    regex: "[а-яА-Я]+"
+    match_kinds: string
+    message: "Cyrillic strings should be localized"
+  strong_self_in_closure:
+    included: ".*.swift"
+    name: "Strong self in closure"
+    regex: "\{ (?!(\[unowned self\]|\[weak self\])) ?.* in\n"
+    message: "Self in closures should be unowned or weak"
+
+reporter: "json" # reporter type (xcode, json, csv, checkstyle, junit, html, emoji)
